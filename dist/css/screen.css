@@ -356,9 +356,7 @@ th {
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  max-width: 100vw;
-  overflow-x: hidden; }
+  font-family: 'Open Sans', sans-serif; }
 
 a, a:visited, a:active, a:hover {
   color: #24333A;
@@ -449,7 +447,7 @@ section#hero {
       margin-left: auto;
       margin-right: auto;
       text-align: center;
-      bottom: 0px; }
+      bottom: 50px; }
 
 section#providers {
   margin-top: 20vh;
@@ -570,6 +568,8 @@ section#vorteile {
 section#funktioniert {
   margin-top: 20vh;
   width: 100%;
+  max-width: 100vw;
+  overflow: hidden;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -581,8 +581,7 @@ section#funktioniert {
     text-align: center;
     max-width: 1400px; }
   section#funktioniert .bulletpoints {
-    max-width: 90%;
-    margin-left: 5%; }
+    max-width: 90%; }
     section#funktioniert .bulletpoints .row {
       display: flex;
       justify-content: space-between;
