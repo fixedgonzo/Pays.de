@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="26px" height="19px" viewBox="0 0 26 19" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>header-kredupay</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pays.de-0816" transform="translate(-1004.000000, -29.000000)" fill-rule="nonzero">
+            <g id="Group-33" transform="translate(375.000000, 26.000000)">
+                <g id="Group-41">
+                    <g id="Group-49-Copy" transform="translate(629.000000, 3.000000)">
+                        <g id="header-kredupay">
+                            <rect id="Rectangle-17" stroke="#FB5101" stroke-width="1.5" x="0.75" y="0.75" width="24.5" height="17.5" rx="4"></rect>
+                            <rect id="Rectangle-21" fill="#FB5101" x="1" y="4" width="24" height="4"></rect>
+                            <path d="M4.5,10.5 L17.5,10.5" id="Line" stroke="#FB5101" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"></path>
+                            <path d="M4.5,13.5 L8.5,13.5" id="Line-Copy" stroke="#FB5101" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

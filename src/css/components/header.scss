@@ -1,0 +1,52 @@
+@import "../neat/neat";
+@import '../base/variables';
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: $section-width;
+	margin-left: $section-padding;
+	// padding: 0 8%;
+	margin-top: 15px;
+
+	.header-logo {
+
+	}
+	.header-menu {
+		width: 60%;
+		max-width: 900px;
+
+		ul {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+
+			li {
+				img {
+					margin-right: 5px;
+				}
+				a {
+					display: flex;
+					justify-content: space-between;
+					align-items: center;
+				}
+				span.value {
+					margin-left: 5px
+				}
+				strong.label {
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+
+	.header-lang {
+		a img {
+			width: 50%;
+		}
+	}
+}

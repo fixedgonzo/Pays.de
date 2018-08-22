@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="40px" viewBox="0 0 32 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>vorteile-icon-Datenschutz</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="pays.de-0816" transform="translate(-971.000000, -2588.000000)" fill="#FB5101">
+            <g id="Group-23" transform="translate(266.000000, 2343.000000)">
+                <g id="Group-50" transform="translate(0.000000, 112.000000)">
+                    <g id="Group-14" transform="translate(705.000000, 131.000000)">
+                        <g id="vorteile-icon-Datenschutz" transform="translate(0.000000, 2.000000)">
+                            <path d="M16,0 C9.924,0 5,4.92385 5,11 L5,18 L2,18 C0.8926,18 0,18.8926 0,20 L0,38 C0,39.1074 0.8926,40 2,40 L30,40 C31.1074,40 32,39.1074 32,38 L32,20 C32,18.8926 31.1074,18 30,18 L27,18 L27,11 C27,4.924 22.07615,0 16,0 Z M16,2 C21.004,2 25,5.9961 25,11 L25,18 L7,18 L7,11 C7,5.996 10.9961,2 16,2 Z" id="Fill-1"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
