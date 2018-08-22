@@ -473,6 +473,7 @@ section#providers {
       margin: 0;
       padding: 0; }
       section#providers .logos ul li {
+        transition: all 0.2s;
         opacity: .8;
         display: flex;
         justify-content: center;
