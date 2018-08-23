@@ -1,16 +1,17 @@
 var gulp = require('gulp');
 var plumber = require('gulp-plumber');
-// var rename = require('gulp-rename');
+var rename = require('gulp-rename');
 var bourbon = require("bourbon").includePaths;
 var neat = require("bourbon-neat").includePaths;
 var sass = require('gulp-sass');
-// var autoprefixer = require('gulp-autoprefixer');
-// var concatCss = require('gulp-concat-css');
-// var cleanCSS = require('gulp-clean-css');
+var autoprefixer = require('gulp-autoprefixer');
+var concatCss = require('gulp-concat-css');
+var cleanCSS = require('gulp-clean-css');
 var browserSync = require('browser-sync');
-// var minifyImage = require('gulp-imagemin');
-// var cache = require('gulp-cache');
-// var neat = require('node-neat');
+var imagemin = require('gulp-imagemin');
+var imageminJpegRecompress = require('imagemin-jpeg-recompress');
+var imageminPngQuant  = require ('imagemin-pngquant');
+var cache = require('gulp-cache');
 
 var JS_SOURCE = 'src/js';
 var JS_DEST = 'dist/js';
@@ -46,21 +47,31 @@ gulp.task('css', function() {
 			sourcemaps: true,
       includePaths: [bourbon, neat]
     }))
-    // .pipe(autoprefixer('last 2 versions'))
+    .pipe(autoprefixer('last 2 versions'))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(CSS_DEST + '/'))
-    // .pipe(rename({suffix: '.min'}))
-    // .pipe(cleanCSS({compatibility: 'ie8'}))
-    // .pipe(gulp.dest(CSS_DEST + '/'))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(CSS_DEST + '/'))
     .pipe(browserSync.reload({ stream:true }))
 });
 
-// gulp.task('images', function() {
-//   gulp.src(IMAGE_SOURCE + '/**/*')
-//     .pipe(cache(imagemin({ optimizationLevel: 3, progressive: true, interlaced: true })))
-//     .pipe(gulp.dest(IMAGE_DEST + '/'));
-// });
+gulp.task('optimize', function() {
+  gulp.src(IMAGE_SOURCE + '/**/*')
+    .pipe(imagemin([
+      imagemin.gifsicle(),
+      imageminJpegRecompress({
+        loops:6,
+        min: 40,
+        max: 85,
+        quality:'medium'
+      }),
+      imageminPngQuant(),
+        imagemin.svgo()
+      ]))
+    .pipe(gulp.dest(IMAGE_DEST + '/'));
+});
 
-gulp.task('default', ['browser-sync'], function() {
+gulp.task('default', ['browser-sync', 'optimize'], function() {
   gulp.watch(JS_SOURCE + '/**/*.js', ['javascript']);
   gulp.watch(CSS_SOURCE + '/**/*.scss', ['css']);
   gulp.watch(WATCH_FILE_EXTENSIONS, ['bs-reload']);
