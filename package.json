@@ -21,7 +21,10 @@
         "gulp-imagemin": "^4.1.0",
         "gulp-plumber": "^1.2.0",
         "gulp-rename": "^1.4.0",
-        "gulp-sass": "^4.0.1"
+        "gulp-sass": "^4.0.1",
+        "gulp-tinypng": "^1.0.2",
+        "imagemin-jpeg-recompress": "^5.1.0",
+        "imagemin-pngquant": "^6.0.0"
     },
     "dependencies": {
         "aos": "^2.3.3"
