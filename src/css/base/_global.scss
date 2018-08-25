@@ -1,5 +1,5 @@
-@import "../neat/neat";
 @import '../base/variables';
+@import "plugins/_include-media.scss";
 
 // Global CSS goes here
 html, body {
@@ -31,3 +31,15 @@ h2 {
 p {
 	font-size: 26px;
 }
+
+$neat-grid-fullwidth: (
+  columns: 12,
+  gutter: 20px,
+);
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1024px,
+	desktop-hd: 1980px,
+);

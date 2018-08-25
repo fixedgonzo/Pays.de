@@ -1,22 +1,42 @@
-@import "../neat/neat";
+@import "../plugins/neat/_neat.scss";
+@import "../plugins/_include-media.scss";
 @import '../base/variables';
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 1024px,
+	desktop: 1280px,
+	desktop-hd: 1980px,
+);
 
 header {
 	display: flex;
-	justify-content: space-between;
 	align-items: center;
-	width: $section-width;
-	margin-left: $section-padding;
-	// padding: 0 8%;
 	margin-top: 15px;
+	@include grid-container;
 
 	.header-logo {
-
+		@include media("<tablet") {
+			@include grid-column(6);
+		}
+		@include media(">=tablet", "<desktop-hd") {
+			@include grid-column(2);
+		}
+		@include media(">=desktop-hd") {
+			@include grid-column(3);
+		}
 	}
 	.header-menu {
-		width: 60%;
-		max-width: 900px;
-
+		@include media("<tablet") {
+			display: none;
+		}
+		@include media(">=tablet", "<desktop-hd") {
+			@include grid-column(8);
+		}
+		@include media(">=desktop-hd") {
+			@include grid-column(6);
+		}
+		text-align: center;
 		ul {
 			display: flex;
 			justify-content: space-between;
@@ -24,7 +44,6 @@ header {
 			list-style-type: none;
 		  margin: 0;
 		  padding: 0;
-
 			li {
 				img {
 					margin-right: 5px;
@@ -43,10 +62,20 @@ header {
 			}
 		}
 	}
-
 	.header-lang {
+		@include media("<tablet") {
+			@include grid-column(6);
+		}
+		@include media(">=tablet", "<desktop-hd") {
+			@include grid-column(2);
+		}
+		@include media(">=desktop-hd") {
+			@include grid-column(3);
+		}
+		text-align: right;
 		a img {
 			width: 50%;
+			max-width: 20px;
 		}
 	}
 }

@@ -1,4 +1,5 @@
-@import "neat/neat";
+@import "plugins/neat/_neat.scss";
+@import "plugins/_include-media.scss";
 
 @import 'base/variables';
 @import 'base/normalize';
