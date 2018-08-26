@@ -1,14 +1,3 @@
-@import "../plugins/neat/_neat.scss";
-@import "../plugins/_include-media.scss";
-@import '../base/variables';
-
-$breakpoints: (
-	phone: 320px,
-	tablet: 1024px,
-	desktop: 1280px,
-	desktop-hd: 1980px,
-);
-
 header {
 	display: flex;
 	align-items: center;
@@ -16,10 +5,10 @@ header {
 	@include grid-container;
 
 	.header-logo {
-		@include media("<tablet") {
+		@include media("<=tablet") {
 			@include grid-column(6);
 		}
-		@include media(">=tablet", "<desktop-hd") {
+		@include media(">tablet") {
 			@include grid-column(2);
 		}
 		@include media(">=desktop-hd") {
@@ -27,10 +16,10 @@ header {
 		}
 	}
 	.header-menu {
-		@include media("<tablet") {
+		@include media("<=tablet") {
 			display: none;
 		}
-		@include media(">=tablet", "<desktop-hd") {
+		@include media(">tablet") {
 			@include grid-column(8);
 		}
 		@include media(">=desktop-hd") {
@@ -63,10 +52,10 @@ header {
 		}
 	}
 	.header-lang {
-		@include media("<tablet") {
+		@include media("<=tablet") {
 			@include grid-column(6);
 		}
-		@include media(">=tablet", "<desktop-hd") {
+		@include media(">tablet") {
 			@include grid-column(2);
 		}
 		@include media(">=desktop-hd") {

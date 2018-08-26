@@ -16,7 +16,7 @@ var cache = require('gulp-cache');
 var JS_SOURCE = 'src/js';
 var JS_DEST = 'dist/js';
 var JS_OUTPUT_FILE = 'main.js';
-var CSS_SOURCE = 'src/css';
+var CSS_SOURCE = 'src/scss';
 var CSS_DEST = 'dist/css';
 var IMAGE_SOURCE = 'src/images';
 var IMAGE_DEST = 'dist/images';
@@ -36,11 +36,10 @@ gulp.task('bs-reload', function() {
 });
 
 gulp.task('css', function() {
-  gulp.src(CSS_SOURCE + '/**/*.scss')
+  gulp.src(CSS_SOURCE + '/screen.scss')
     .pipe(plumber({
       errorHandler: function(error) {
         console.log(error.message);
-        // generator.emit('end');
     }}))
     .pipe(sass({
 			errLogToConsole: true,
@@ -48,8 +47,8 @@ gulp.task('css', function() {
       includePaths: [bourbon, neat]
     }))
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest(CSS_DEST + '/'))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(CSS_DEST + '/'))
     .pipe(browserSync.reload())

@@ -1,5 +1,6 @@
 @import "plugins/neat/_neat.scss";
 @import "plugins/_include-media.scss";
+@import 'plugins/fluid-aspect';
 
 @import 'base/variables';
 @import 'base/normalize';
@@ -12,6 +13,3 @@
 
 // Import Layouts
 @import 'layouts/home';
-
-// Import Plugins
-// @import 'plugins/plugin';

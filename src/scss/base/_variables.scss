@@ -1,0 +1,25 @@
+// Variables go here
+$bg-blue: #FF0000;
+$grey: #24333A;
+$orange: #FB5101;
+
+$section-width: 90%;
+$section-padding: 5%;
+
+$breakpoints: (
+	phone: 320px,
+	tablet: 768px,
+	desktop: 1024px,
+	desktop-sd: 1152px,
+	desktop-hd: 1980px,
+);
+
+$neat-grid-nogap: (
+  columns: 12,
+  gutter: 0,
+);
+
+$neat-grid-fullwidth: (
+  columns: 12,
+  gutter: 20px,
+);
