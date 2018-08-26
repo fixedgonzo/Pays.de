@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="23px" height="74px" viewBox="0 0 23 74" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow-vertical-right</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Final" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="pays.de-0816-mobile" transform="translate(-268.000000, -2553.000000)" fill-rule="nonzero" stroke="#24333A" stroke-width="2.5">
+            <g id="Group-26" transform="translate(63.000000, 2541.000000)">
+                <g id="arrow-vertical-right" transform="translate(216.500000, 49.000000) scale(-1, 1) translate(-216.500000, -49.000000) translate(207.000000, 14.000000)">
+                    <polyline id="Rectangle-19" points="18 65 0 65 0 0 18 0"></polyline>
+                    <polyline id="Rectangle-20" transform="translate(13.949747, 64.949747) rotate(-45.000000) translate(-13.949747, -64.949747) " points="17.4497475 61.4497475 17.4497475 68.4497475 10.4497475 68.4497475"></polyline>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

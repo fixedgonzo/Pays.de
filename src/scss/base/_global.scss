@@ -3,6 +3,8 @@ html, body {
   margin: 0;
 	padding: 0;
 	font-family: 'Open Sans', sans-serif;
+	display: flex;
+	flex-direction: column;
 }
 
 a, a:visited, a:active, a:hover {
@@ -42,4 +44,8 @@ h2 {
 
 p {
 	font-size: 26px;
+}
+
+h6 {
+	font-size: 18px;
 }

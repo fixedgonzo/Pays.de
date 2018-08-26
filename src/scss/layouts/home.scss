@@ -80,9 +80,6 @@ section#providers {
 			list-style-type: none;
 		  margin: 0;
 		  padding: 0;
-			// @include media("<tablet") {
-			// 	width: 200%;
-			// }
 			@include grid-collapse;
 			li {
 				&:hover {
@@ -166,7 +163,6 @@ section#vorteile {
 		@include grid-column(6);
 		@include grid-push(3);
 	}
-	// width: 100%;
 	padding-top: 20%;
 	display: flex;
 	flex-wrap: wrap;
@@ -177,10 +173,17 @@ section#vorteile {
 		text-align: center;
 	}
 	.bulletpoints {
-		@include grid-collapse;
+		display: flex;
+		flex-wrap: wrap;
+		// @include grid-collapse;
+		outline: 5px solid red;
+
 		.bulletpoint {
 			@include media("<tablet") {
 				@include grid-column(12);
+				h6 {
+						max-width: 70%;
+				}
 			}
 			@include media(">=tablet") {
 				@include grid-column(6);
@@ -267,10 +270,10 @@ section#funktioniert {
 				display: flex;
 				justify-content: flex-start;
 				align-items: center;
-				width: calc(100% / 3);
+				width: 40%;
 				font-size: 18px;
 				font-weight: 700;
-				margin: 25px 0;
+				// margin: 25px 0;
 				div {
 					min-width: 80px;
 					min-height: 80px;
@@ -278,6 +281,12 @@ section#funktioniert {
 					justify-content: center;
 					align-items: center;
 				}
+			}
+			.arrow {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 20%;
 			}
 		}
 	}
@@ -334,112 +343,30 @@ section#bezahlmethoden {
 		@include grid-push(3);
 	}
 	margin-top: 20%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	.title {
-		text-align: center;
-		max-width: 1400px;
-	}
-	.row {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		flex-wrap: wrap;
-		margin-top: 50px;
-
-		div {
-			margin-right: 5vw;
-		}
-		div:last-child {
-			margin-right: 0;
-		}
-	}
-}
-
-section#partner {
-	margin-top: 10%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	margin-bottom: 50px;
 	.title {
 		text-align: center;
 	}
 	.row {
 		display: flex;
-		justify-content: space-between;
 		align-items: center;
-		flex-wrap: wrap;
 		margin-top: 50px;
-
-		div {
-			margin-right: 5vw;
-		}
-		div:last-child {
-			margin-right: 0;
-		}
-	}
-}
-
-footer {
-	margin-top: 10vh;
-	width: 100%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-	background-color: #FBFAFE;
-	hr {
-		width: 40%;
-		margin-bottom: 50px;
-		border: 0;
-		height: 1px;
-		background-color: #E5E6E6;
-		color: #E5E6E6;
-	}
-	ul.footer-menu {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		flex-wrap: wrap;
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		margin-bottom: 50px;
 		width: 100%;
-		li {
-			margin-right: 5%;
+		@include grid-collapse;
+
+		div {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include media("<tablet") {
+				@include grid-column(12);
+			}
+			@include media(">=tablet") {
+				@include grid-column(6);
+			}
+			img {
+				max-width: 80%;
+				height: auto;
+			}
 		}
-		li:last-child {
-			margin-right: 0;
-		}
-		a {
-			color: $orange;
-		}
-	}
-	a.facebook {
-		width: 30px;
-		height: 30px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin-bottom: 50px;
-	}
-	ul.footer-about {
-		flex-wrap: wrap;
-		list-style-type: none;
-		margin: 0;
-		padding: 0;
-		text-align: center;
-		margin-bottom: 50px;
-		line-height: 30px;
-		color: #4E595F;
-		font-size: 12px;
 	}
 }

@@ -1,0 +1,113 @@
+footer {
+	margin-top: 10%;
+	width: 100%;
+	background-color: #FBFAFE;
+	#footer-partner {
+		padding-top: 10%;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		padding-bottom: 50px;
+		.title {
+			text-align: center;
+		}
+		.row {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			flex-wrap: wrap;
+			margin-top: 50px;
+
+			@include media("<desktop-sd") {
+				@include grid-column(12);
+			}
+			@include media(">=desktop-sd") {
+				@include grid-column(10);
+			}
+			@include media(">=desktop-hd") {
+				@include grid-column(8);
+			}
+			margin-left: 0 !important;
+			div {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				@include media("<tablet") {
+					@include grid-column(12);
+				}
+				@include media("<desktop-sd") {
+					@include grid-column(6);
+					margin-bottom: 50px;
+				}
+				@include media(">=desktop-sd") {
+					@include grid-column(3);
+				}
+				@include media(">=desktop-hd") {
+					@include grid-column(3);
+				}
+				img {
+					max-width: 80%;
+					height: auto;
+				}
+			}
+		}
+	}
+
+	#footer-menu {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		hr {
+			width: 40%;
+			margin-bottom: 50px;
+			border: 0;
+			height: 1px;
+			background-color: #E5E6E6;
+			color: #E5E6E6;
+		}
+		ul.menu {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			margin-bottom: 50px;
+			width: 100%;
+			li {
+				margin-right: 5%;
+			}
+			li:last-child {
+				margin-right: 0;
+			}
+			a {
+				color: $orange;
+			}
+		}
+		a.facebook {
+			width: 30px;
+			height: 30px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 50px;
+		}
+		ul.about {
+			flex-wrap: wrap;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			margin-bottom: 50px;
+			line-height: 30px;
+			color: #4E595F;
+			font-size: 12px;
+		}
+	}
+}

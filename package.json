@@ -30,6 +30,7 @@
     },
     "dependencies": {
         "aos": "^2.3.3",
-        "gulp-concat": "^2.6.1"
+        "gulp-concat": "^2.6.1",
+        "gulp-responsive-imgz": "0.0.4",
     }
 }
