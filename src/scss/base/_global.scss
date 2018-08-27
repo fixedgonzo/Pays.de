@@ -16,6 +16,11 @@ strong, .strong {
 	font-weight: 700;
 }
 
+// h1, h2, h3, h4, h5, h6, p, ul, li, ol {
+//   margin: 0;
+//   padding: 0;
+// }
+
 h1 {
   @include media("<tablet") {
   	font-size: 30px;
@@ -48,4 +53,21 @@ p {
 
 h6 {
 	font-size: 18px;
+}
+
+.visible {
+  visibility: hidden;
+  display: none;
+  &.mobile {
+    @include media("<tablet") {
+      visibility: visible;
+      display: inherit;
+    }
+  }
+  &.desktop {
+    @include media(">=tablet") {
+      visibility: visible;
+      display: inherit;
+    }
+  }
 }

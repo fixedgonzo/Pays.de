@@ -405,6 +405,18 @@ p {
 h6 {
   font-size: 18px; }
 
+.visible {
+  visibility: hidden;
+  display: none; }
+  @media (max-width: 767px) {
+    .visible.mobile {
+      visibility: visible;
+      display: inherit; } }
+  @media (min-width: 768px) {
+    .visible.desktop {
+      visibility: visible;
+      display: inherit; } }
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -652,9 +664,10 @@ footer {
       padding: 0;
       text-align: center;
       margin-bottom: 50px;
-      line-height: 30px;
       color: #4E595F;
       font-size: 12px; }
+      footer #footer-menu ul.about li {
+        padding: 10px 0; }
 
 .button {
   border-radius: 4px;
@@ -713,9 +726,9 @@ section#hero {
     position: relative; }
     @media (max-width: 768px) {
       section#hero .image {
-        width: calc(100% - 40px);
+        width: calc(100%);
         float: left;
-        margin-left: 20px; } }
+        margin-left: 0; } }
     @media (min-width: 769px) {
       section#hero .image {
         width: calc(66.66667% - 33.33333px);
@@ -725,14 +738,15 @@ section#hero {
     section#hero .image img {
       width: 100%;
       height: auto; }
-    section#hero .image .cta {
-      width: 100%;
-      height: 50px;
-      position: absolute;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center;
-      bottom: 50px; }
+    @media (min-width: 768px) {
+      section#hero .image .cta {
+        width: 100%;
+        height: 50px;
+        position: absolute;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        bottom: 50px; } }
 
 section#providers {
   padding-top: 20%;
@@ -762,7 +776,7 @@ section#providers {
         float: left;
         margin-left: 20px;
         margin-left: calc(25% - 25px + 40px); } }
-  @media (max-width: 1979px) {
+  @media (min-width: 768px) {
     section#providers .logos {
       width: calc(100% - 40px);
       float: left;
@@ -804,7 +818,7 @@ section#providers {
         opacity: 1; }
       @media (max-width: 767px) {
         section#providers .logos ul li {
-          width: calc(33.33333%);
+          width: calc(16.66667%);
           float: left;
           margin-left: 0;
           border: 1px solid #E5ECEF; } }
@@ -862,22 +876,47 @@ section#wasistpays {
       -ms-flex-direction: column;
           flex-direction: column; }
   @media (max-width: 1023px) {
-    section#wasistpays {
+    section#wasistpays .content {
       width: calc(100% - 40px);
       float: left;
       margin-left: 20px; } }
   @media (min-width: 1024px) {
-    section#wasistpays {
+    section#wasistpays .content {
       width: calc(66.66667% - 33.33333px);
       float: left;
       margin-left: 20px;
       margin-left: calc(16.66667% - 23.33333px + 40px); } }
   @media (min-width: 1152px) {
-    section#wasistpays {
+    section#wasistpays .content {
       width: calc(50% - 30px);
       float: left;
       margin-left: 20px;
       margin-left: calc(25% - 25px + 40px); } }
+  @media (max-width: 767px) {
+    section#wasistpays .image {
+      width: calc(100%);
+      float: left;
+      margin-left: 0; } }
+  @media (min-width: 768px) {
+    section#wasistpays .image {
+      width: calc(100% - 40px);
+      float: left;
+      margin-left: 20px; } }
+  @media (min-width: 1024px) {
+    section#wasistpays .image {
+      width: calc(66.66667% - 33.33333px);
+      float: left;
+      margin-left: 20px;
+      margin-left: calc(16.66667% - 23.33333px + 40px); } }
+  @media (min-width: 1152px) {
+    section#wasistpays .image {
+      width: calc(50% - 30px);
+      float: left;
+      margin-left: 20px;
+      margin-left: calc(25% - 25px + 40px); } }
+  section#wasistpays .image img {
+    width: 100%;
+    height: auto; }
   section#wasistpays .title {
     text-align: center; }
   section#wasistpays .copy {
@@ -926,8 +965,9 @@ section#vorteile {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    outline: 5px solid red;
-    display: none; }
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px); }
     section#vorteile .bulletpoints .bulletpoint {
       opacity: .8;
       display: -webkit-box;
@@ -947,7 +987,8 @@ section#vorteile {
           float: left;
           margin-left: 20px; }
           section#vorteile .bulletpoints .bulletpoint h6 {
-            max-width: 70%; } }
+            max-width: 70%;
+            margin: 20px 0; } }
       @media (min-width: 768px) {
         section#vorteile .bulletpoints .bulletpoint {
           width: calc(50% - 30px);
@@ -1033,7 +1074,31 @@ section#funktioniert {
             align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap; }
-    @media (max-width: 1023px) {
+    @media (max-width: 767px) {
+      section#funktioniert .bulletpoints .row {
+        width: calc(100% - 40px);
+        float: left;
+        margin-left: 20px;
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px);
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        position: relative;
+        margin-bottom: 20px; }
+        section#funktioniert .bulletpoints .row:first-child, section#funktioniert .bulletpoints .row:last-child {
+          background-image: url("../images/arrow-vertical-left.svg");
+          background-repeat: no-repeat;
+          background-position: left 10% center;
+          background-size: 5%; }
+        section#funktioniert .bulletpoints .row:nth-of-type(2) {
+          background-image: url("../images/arrow-vertical-right.svg");
+          background-repeat: no-repeat;
+          background-position: right 10% center;
+          background-size: 5%; } }
+    @media (min-width: 768px) {
       section#funktioniert .bulletpoints .row {
         width: calc(100% - 40px);
         float: left;
@@ -1066,6 +1131,14 @@ section#funktioniert {
       width: 40%;
       font-size: 18px;
       font-weight: 700; }
+      @media (max-width: 767px) {
+        section#funktioniert .bulletpoints .row .bulletpoint {
+          width: calc(66.66667% - 33.33333px);
+          float: left;
+          margin-left: 20px;
+          margin-left: 0; }
+          section#funktioniert .bulletpoints .row .bulletpoint h6 {
+            margin: 10px 0; } }
       section#funktioniert .bulletpoints .row .bulletpoint div {
         min-width: 80px;
         min-height: 80px;
@@ -1078,6 +1151,8 @@ section#funktioniert {
         -webkit-box-align: center;
             -ms-flex-align: center;
                 align-items: center; }
+      section#funktioniert .bulletpoints .row .bulletpoint:last-child h6 {
+        font-weight: 400; }
     section#funktioniert .bulletpoints .row .arrow {
       display: -webkit-box;
       display: -ms-flexbox;
@@ -1089,6 +1164,9 @@ section#funktioniert {
           -ms-flex-align: center;
               align-items: center;
       width: 20%; }
+      @media (max-width: 767px) {
+        section#funktioniert .bulletpoints .row .arrow {
+          display: none; } }
   section#funktioniert .cta {
     width: 100%;
     height: 15vh;

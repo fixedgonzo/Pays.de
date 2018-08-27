@@ -1,0 +1,5 @@
+AOS.init({
+ duration: 1200
+});
+
+//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uanMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7QUFDQTtBQUNBO0FBQ0EiLCJmaWxlIjoibWFpbi5qcyIsInNvdXJjZXNDb250ZW50IjpbIkFPUy5pbml0KHtcbiBkdXJhdGlvbjogMTIwMFxufSk7XG4iXX0=

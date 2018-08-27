@@ -5,11 +5,11 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Pays.de</title>
+	<title>Pays.de dskuhfdsk</title>
 	<meta name="description" content="">
 	<link rel="stylesheet" href="css/screen.css">
-	<script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/aos.js"></script>
-	<link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/aos.css" rel="stylesheet">
+	<script src="vendor/aos.js"></script>
+	<link href="vendor/aos.css" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700:400,700" rel="stylesheet">
 </head>
 
@@ -37,7 +37,8 @@
 			<h1>Erhalte schnell und einfach digitale Gutscheine auf Kredit</h1>
 		</div>
 		<div class="image" data-aos="fade-up">
-			<img src="images/intro.png" srcset="images/intro.png 1x, images/intro@2x.png 2x, images/intro@3x.png 3x">
+			<img src="images/intro.png" class="visible desktop" srcset="images/intro.png 1x, images/intro@2x.png 2x, images/intro@3x.png 3x">
+			<img src="images/intro-mobile.png" class="visible mobile" srcset="images/intro-mobile.png 1x, images/intro-mobile@2x.png 2x, images/intro-mobile@3x.png 3x">
 			<div class="cta">
 				<a href="#" class="button orange">Jetzt Gutschein kaufen</a>
 			</div>
@@ -70,14 +71,19 @@
 	</section>
 
 	<section id="wasistpays">
-		<div class="title" data-aos="fade-up">
-			<h2>Was ist Pays?</h2>
+		<div class="content">
+			<div class="title" data-aos="fade-up">
+				<h2>Was ist Pays?</h2>
+			</div>
+			<div class="copy" data-aos="fade-up">
+				<p>Mit pays hast Du die Möglichkeit ohne Vorkasse sofort digitale Gutscheine zu erhalten und damit in den jeweiligen Online-Shops einzukaufen.</p>
+				<p>Du bestimmst wann Du die Gutscheine bezahlst. Bequeme Ratenzahlung bis zu 90 Tage ist möglich.</p>
+			</div>
 		</div>
-		<div class="copy" data-aos="fade-up">
-			<p>Mit pays hast Du die Möglichkeit ohne Vorkasse sofort digitale Gutscheine zu erhalten und damit in den jeweiligen Online-Shops einzukaufen.</p>
-			<p>Du bestimmst wann Du die Gutscheine bezahlst. Bequeme Ratenzahlung bis zu 90 Tage ist möglich.</p>
+		<div class="image">
+			<img src="images/packages.png" data-aos="fade-up" class="visible desktop" srcset="images/packages.png 1x, images/packages@2x.png 2x, images/packages@3x.png 3x">
+			<img src="images/packages-mobile.png" data-aos="fade-up" class="visible mobile" srcset="images/packages-mobile.png 1x, images/packages-mobile@2x.png 2x, images/packages-mobile@3x.png 3x">
 		</div>
-		<img src="images/packages.png" data-aos="fade-up" srcset="images/packages.png 1x, images/packages@2x.png 2x, images/packages@3x.png 3x">
 	</section>
 
 	<section id="vorteile">
