@@ -1,7 +1,52 @@
+section#bezahlmethoden {
+	margin-top: 20%;
+	@include media("<desktop-sd") {
+		@include grid-column(12);
+	}
+	@include media(">=desktop-sd") {
+		@include grid-column(8);
+		@include grid-push(2);
+	}
+	@include media(">=desktop-hd") {
+		@include grid-column(6);
+		@include grid-push(3);
+	}
+	.row {
+		display: flex;
+		align-items: center;
+		margin-top: 50px;
+		width: 100%;
+
+		@include media(">tablet") {
+			@include grid-collapse;
+		}
+
+		div {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			@include media("<tablet") {
+				@include grid-column(12);
+				&:last-child {
+					margin-right: 20px;
+				}
+			}
+			@include media(">=tablet") {
+				@include grid-column(6);
+			}
+			img {
+				max-width: 80%;
+				height: auto;
+			}
+		}
+	}
+}
+
 footer {
 	margin-top: 10%;
 	width: 100%;
 	background-color: #FBFAFE;
+
 	#footer-partner {
 		padding-top: 10%;
 		width: 100%;
@@ -88,6 +133,18 @@ footer {
 			}
 			a {
 				color: $orange;
+			}
+
+			@include media("<tablet") {
+				& {
+					flex-wrap: wrap;
+					justify-content: flex-start;
+
+					li {
+						margin: 10px 40px;
+						width: calc(50% - 80px);
+					}
+				}
 			}
 		}
 		a.facebook {

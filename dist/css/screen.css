@@ -509,6 +509,65 @@ header {
       width: 50%;
       max-width: 20px; }
 
+section#bezahlmethoden {
+  margin-top: 20%; }
+  @media (max-width: 1151px) {
+    section#bezahlmethoden {
+      width: calc(100% - 40px);
+      float: left;
+      margin-left: 20px; } }
+  @media (min-width: 1152px) {
+    section#bezahlmethoden {
+      width: calc(66.66667% - 33.33333px);
+      float: left;
+      margin-left: 20px;
+      margin-left: calc(16.66667% - 23.33333px + 40px); } }
+  @media (min-width: 1980px) {
+    section#bezahlmethoden {
+      width: calc(50% - 30px);
+      float: left;
+      margin-left: 20px;
+      margin-left: calc(25% - 25px + 40px); } }
+  section#bezahlmethoden .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 50px;
+    width: 100%; }
+    @media (min-width: 769px) {
+      section#bezahlmethoden .row {
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px); } }
+    section#bezahlmethoden .row div {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+      @media (max-width: 767px) {
+        section#bezahlmethoden .row div {
+          width: calc(100% - 40px);
+          float: left;
+          margin-left: 20px; }
+          section#bezahlmethoden .row div:last-child {
+            margin-right: 20px; } }
+      @media (min-width: 768px) {
+        section#bezahlmethoden .row div {
+          width: calc(50% - 30px);
+          float: left;
+          margin-left: 20px; } }
+      section#bezahlmethoden .row div img {
+        max-width: 80%;
+        height: auto; }
+
 footer {
   margin-top: 10%;
   width: 100%;
@@ -643,6 +702,16 @@ footer {
         margin-right: 0; }
       footer #footer-menu ul.menu a {
         color: #FB5101; }
+      @media (max-width: 767px) {
+        footer #footer-menu ul.menu {
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          -webkit-box-pack: start;
+              -ms-flex-pack: start;
+                  justify-content: flex-start; }
+          footer #footer-menu ul.menu li {
+            margin: 10px 40px;
+            width: calc(50% - 80px); } }
     footer #footer-menu a.facebook {
       width: 30px;
       height: 30px;
@@ -690,6 +759,26 @@ footer {
             box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
     color: white; }
 
+.title {
+  text-align: center;
+  padding-bottom: 3%; }
+
+.cta {
+  width: 100%;
+  padding: 2% 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
 section#hero {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -702,25 +791,25 @@ section#hero {
     clear: both;
     content: "";
     display: block; }
+  @media (max-width: 1023px) {
+    section#hero .title {
+      width: calc(100% - 40px);
+      float: left;
+      margin-left: 20px; } }
+  @media (min-width: 1024px) {
+    section#hero .title {
+      width: calc(83.33333% - 36.66667px);
+      float: left;
+      margin-left: 20px;
+      margin-left: calc(8.33333% - 21.66667px + 40px); } }
+  @media (min-width: 1980px) {
+    section#hero .title {
+      width: calc(50% - 30px);
+      float: left;
+      margin-left: 20px;
+      margin-left: calc(25% - 25px + 40px); } }
   section#hero .title {
-    text-align: center; }
-    @media (max-width: 1023px) {
-      section#hero .title {
-        width: calc(100% - 40px);
-        float: left;
-        margin-left: 20px; } }
-    @media (min-width: 1024px) {
-      section#hero .title {
-        width: calc(83.33333% - 36.66667px);
-        float: left;
-        margin-left: 20px;
-        margin-left: calc(8.33333% - 21.66667px + 40px); } }
-    @media (min-width: 1980px) {
-      section#hero .title {
-        width: calc(50% - 30px);
-        float: left;
-        margin-left: 20px;
-        margin-left: calc(25% - 25px + 40px); } }
+    padding-bottom: 0; }
   section#hero .image {
     text-align: center;
     position: relative; }
@@ -738,18 +827,16 @@ section#hero {
     section#hero .image img {
       width: 100%;
       height: auto; }
-    @media (min-width: 768px) {
-      section#hero .image .cta {
-        width: 100%;
-        height: 50px;
-        position: absolute;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        bottom: 50px; } }
+    section#hero .image .cta {
+      width: 100%;
+      position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      bottom: 0; }
 
 section#providers {
-  padding-top: 20%;
+  padding-top: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -757,25 +844,27 @@ section#providers {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column; }
-  section#providers .title {
-    text-align: center; }
-    @media (max-width: 767px) {
-      section#providers .title {
-        width: calc(100% - 40px);
-        float: left;
-        margin-left: 20px; } }
-    @media (min-width: 768px) {
-      section#providers .title {
-        width: calc(66.66667% - 33.33333px);
-        float: left;
-        margin-left: 20px;
-        margin-left: calc(16.66667% - 23.33333px + 40px); } }
-    @media (min-width: 1152px) {
-      section#providers .title {
-        width: calc(50% - 30px);
-        float: left;
-        margin-left: 20px;
-        margin-left: calc(25% - 25px + 40px); } }
+  @media (max-width: 767px) {
+    section#providers .title {
+      width: calc(100% - 40px);
+      float: left;
+      margin-left: 20px; } }
+  @media (min-width: 768px) {
+    section#providers .title {
+      width: calc(66.66667% - 33.33333px);
+      float: left;
+      margin-left: 20px;
+      margin-left: calc(16.66667% - 23.33333px + 40px); } }
+  @media (min-width: 1152px) {
+    section#providers .title {
+      width: calc(50% - 30px);
+      float: left;
+      margin-left: 20px;
+      margin-left: calc(25% - 25px + 40px); } }
+  @media (max-width: 767px) {
+    section#providers .logos {
+      padding: 20px 0;
+      margin: 20px 0; } }
   @media (min-width: 768px) {
     section#providers .logos {
       width: calc(100% - 40px);
@@ -793,10 +882,23 @@ section#providers {
   section#providers .logos ul {
     list-style-type: none;
     margin: 0;
-    padding: 0;
-    margin-left: -20px;
-    margin-right: -20px;
-    width: calc(100% + 40px); }
+    padding: 0; }
+    @media (max-width: 767px) {
+      section#providers .logos ul {
+        width: calc(120px * 6);
+        max-height: 240px;
+        height: 240px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        margin-left: 20px; } }
+    @media (min-width: 768px) {
+      section#providers .logos ul {
+        margin-left: -20px;
+        margin-right: -20px;
+        width: calc(100% + 40px); } }
     section#providers .logos ul li {
       -webkit-transition: all 0.2s;
       transition: all 0.2s;
@@ -812,21 +914,26 @@ section#providers {
               align-items: center;
       height: 20vh;
       border: 1px solid transparent; }
-      section#providers .logos ul li:hover {
-        -webkit-transform: scale(1.2);
-                transform: scale(1.2);
-        opacity: 1; }
       @media (max-width: 767px) {
         section#providers .logos ul li {
-          width: calc(16.66667%);
-          float: left;
-          margin-left: 0;
-          border: 1px solid #E5ECEF; } }
+          width: 120px;
+          height: 120px;
+          border: none;
+          outline: 1px solid #E5ECEF; }
+          section#providers .logos ul li img {
+            max-width: 100px;
+            max-height: 100px;
+            height: auto; } }
       @media (min-width: 768px) {
         section#providers .logos ul li {
           width: calc(25% - 25px);
           float: left;
           margin-left: 20px; } }
+      @media (min-width: 1024px) {
+        section#providers .logos ul li:hover {
+          -webkit-transform: scale(1.2);
+                  transform: scale(1.2);
+          opacity: 1; } }
       @media (min-width: 1152px) {
         section#providers .logos ul li {
           width: calc(16.66667% - 23.33333px);
@@ -844,37 +951,9 @@ section#providers {
                 align-items: center;
         width: 100%;
         height: 100%; }
-  section#providers .cta {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
 
 section#wasistpays {
-  padding-top: 20%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column; }
+  padding-top: 10%; }
   @media (max-width: 1023px) {
     section#wasistpays .content {
       width: calc(100% - 40px);
@@ -892,6 +971,9 @@ section#wasistpays {
       float: left;
       margin-left: 20px;
       margin-left: calc(25% - 25px + 40px); } }
+  section#wasistpays .copy {
+    text-align: center;
+    margin-bottom: 3%; }
   @media (max-width: 767px) {
     section#wasistpays .image {
       width: calc(100%);
@@ -917,14 +999,9 @@ section#wasistpays {
   section#wasistpays .image img {
     width: 100%;
     height: auto; }
-  section#wasistpays .title {
-    text-align: center; }
-  section#wasistpays .copy {
-    text-align: center;
-    margin-bottom: 5vh; }
 
 section#vorteile {
-  padding-top: 20%;
+  padding-top: 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -959,6 +1036,9 @@ section#vorteile {
       margin-left: calc(25% - 25px + 40px); } }
   section#vorteile .title {
     text-align: center; }
+    @media (max-width: 767px) {
+      section#vorteile .title {
+        padding-bottom: 20px; } }
   section#vorteile .bulletpoints {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -983,9 +1063,10 @@ section#vorteile {
       font-weight: 700; }
       @media (max-width: 767px) {
         section#vorteile .bulletpoints .bulletpoint {
-          width: calc(100% - 40px);
+          width: calc(83.33333% - 36.66667px);
           float: left;
-          margin-left: 20px; }
+          margin-left: 20px;
+          margin-left: calc(8.33333% - 21.66667px + 40px); }
           section#vorteile .bulletpoints .bulletpoint h6 {
             max-width: 70%;
             margin: 20px 0; } }
@@ -993,14 +1074,12 @@ section#vorteile {
         section#vorteile .bulletpoints .bulletpoint {
           width: calc(50% - 30px);
           float: left;
-          margin-left: 20px;
-          margin-bottom: 25px; } }
+          margin-left: 20px; } }
       @media (min-width: 1024px) {
         section#vorteile .bulletpoints .bulletpoint {
           width: calc(33.33333% - 26.66667px);
           float: left;
-          margin-left: 20px;
-          margin-bottom: 50px; } }
+          margin-left: 20px; } }
       section#vorteile .bulletpoints .bulletpoint div {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -1025,23 +1104,10 @@ section#vorteile {
             section#vorteile .bulletpoints .bulletpoint div img {
               max-width: 60px;
               max-height: 60px; } }
-  section#vorteile .cta {
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
 
 section#funktioniert {
   width: 100%;
-  padding-top: 20%;
+  padding-top: 10%;
   max-width: 100%;
   overflow: hidden;
   display: -webkit-box;
@@ -1060,8 +1126,6 @@ section#funktioniert {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative; }
-  section#funktioniert .title {
-    text-align: center; }
   section#funktioniert .bulletpoints .row {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1076,28 +1140,40 @@ section#funktioniert {
         flex-wrap: wrap; }
     @media (max-width: 767px) {
       section#funktioniert .bulletpoints .row {
-        width: calc(100% - 40px);
+        width: calc(83.33333% - 36.66667px);
         float: left;
         margin-left: 20px;
-        margin-left: -20px;
-        margin-right: -20px;
-        width: calc(100% + 40px);
+        margin-left: calc(8.33333% - 21.66667px + 40px);
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
         position: relative;
         margin-bottom: 20px; }
-        section#funktioniert .bulletpoints .row:first-child, section#funktioniert .bulletpoints .row:last-child {
+        section#funktioniert .bulletpoints .row:first-child::before, section#funktioniert .bulletpoints .row:last-child::before {
           background-image: url("../images/arrow-vertical-left.svg");
           background-repeat: no-repeat;
-          background-position: left 10% center;
-          background-size: 5%; }
-        section#funktioniert .bulletpoints .row:nth-of-type(2) {
+          background-position: left center;
+          background-size: 8%;
+          position: absolute;
+          display: block;
+          content: ' ';
+          left: -10%;
+          top: 0;
+          right: 0;
+          bottom: 0; }
+        section#funktioniert .bulletpoints .row:nth-of-type(2)::after {
           background-image: url("../images/arrow-vertical-right.svg");
           background-repeat: no-repeat;
-          background-position: right 10% center;
-          background-size: 5%; } }
+          background-position: right center;
+          background-size: 8%;
+          position: absolute;
+          display: block;
+          content: ' ';
+          left: 0;
+          top: 0;
+          right: -10%;
+          bottom: 0; } }
     @media (min-width: 768px) {
       section#funktioniert .bulletpoints .row {
         width: calc(100% - 40px);
@@ -1108,15 +1184,13 @@ section#funktioniert {
         width: calc(66.66667% - 33.33333px);
         float: left;
         margin-left: 20px;
-        margin-left: calc(16.66667% - 23.33333px + 40px);
-        margin-bottom: 25px; } }
+        margin-left: calc(16.66667% - 23.33333px + 40px); } }
     @media (min-width: 1980px) {
       section#funktioniert .bulletpoints .row {
         width: calc(50% - 30px);
         float: left;
         margin-left: 20px;
-        margin-left: calc(25% - 25px + 40px);
-        margin-bottom: 50px; } }
+        margin-left: calc(25% - 25px + 40px); } }
     section#funktioniert .bulletpoints .row .bulletpoint {
       opacity: .8;
       display: -webkit-box;
@@ -1133,24 +1207,44 @@ section#funktioniert {
       font-weight: 700; }
       @media (max-width: 767px) {
         section#funktioniert .bulletpoints .row .bulletpoint {
-          width: calc(66.66667% - 33.33333px);
-          float: left;
-          margin-left: 20px;
-          margin-left: 0; }
+          width: 100%; }
           section#funktioniert .bulletpoints .row .bulletpoint h6 {
-            margin: 10px 0; } }
-      section#funktioniert .bulletpoints .row .bulletpoint div {
-        min-width: 80px;
-        min-height: 80px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center; }
+            margin: 10px 0; }
+          section#funktioniert .bulletpoints .row .bulletpoint div {
+            min-width: 60px;
+            min-height: 60px;
+            max-width: 60px;
+            max-height: 60px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center; }
+            section#funktioniert .bulletpoints .row .bulletpoint div img {
+              max-width: 30px;
+              max-height: 30px; } }
+      @media (min-width: 768px) {
+        section#funktioniert .bulletpoints .row .bulletpoint div {
+          min-width: 80px;
+          min-height: 80px;
+          max-width: 80px;
+          max-height: 80px;
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -webkit-box-pack: center;
+              -ms-flex-pack: center;
+                  justify-content: center;
+          -webkit-box-align: center;
+              -ms-flex-align: center;
+                  align-items: center; }
+          section#funktioniert .bulletpoints .row .bulletpoint div img {
+            max-width: 60px;
+            max-height: 60px; } }
       section#funktioniert .bulletpoints .row .bulletpoint:last-child h6 {
         font-weight: 400; }
     section#funktioniert .bulletpoints .row .arrow {
@@ -1167,21 +1261,6 @@ section#funktioniert {
       @media (max-width: 767px) {
         section#funktioniert .bulletpoints .row .arrow {
           display: none; } }
-  section#funktioniert .cta {
-    width: 100%;
-    height: 15vh;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
   section#funktioniert .phone-container {
     width: 100%;
     top: 50px;
@@ -1214,62 +1293,5 @@ section#funktioniert {
       section#funktioniert .phone-container [data-aos="phone-rotate"].aos-animate {
         -webkit-transform: rotate(-16deg);
                 transform: rotate(-16deg); }
-
-section#bezahlmethoden {
-  margin-top: 20%; }
-  @media (max-width: 1151px) {
-    section#bezahlmethoden {
-      width: calc(100% - 40px);
-      float: left;
-      margin-left: 20px; } }
-  @media (min-width: 1152px) {
-    section#bezahlmethoden {
-      width: calc(66.66667% - 33.33333px);
-      float: left;
-      margin-left: 20px;
-      margin-left: calc(16.66667% - 23.33333px + 40px); } }
-  @media (min-width: 1980px) {
-    section#bezahlmethoden {
-      width: calc(50% - 30px);
-      float: left;
-      margin-left: 20px;
-      margin-left: calc(25% - 25px + 40px); } }
-  section#bezahlmethoden .title {
-    text-align: center; }
-  section#bezahlmethoden .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 50px;
-    width: 100%;
-    margin-left: -20px;
-    margin-right: -20px;
-    width: calc(100% + 40px); }
-    section#bezahlmethoden .row div {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      @media (max-width: 767px) {
-        section#bezahlmethoden .row div {
-          width: calc(100% - 40px);
-          float: left;
-          margin-left: 20px; } }
-      @media (min-width: 768px) {
-        section#bezahlmethoden .row div {
-          width: calc(50% - 30px);
-          float: left;
-          margin-left: 20px; } }
-      section#bezahlmethoden .row div img {
-        max-width: 80%;
-        height: auto; }
 
 /*# sourceMappingURL=screen.css.map */
