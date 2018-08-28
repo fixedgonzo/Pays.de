@@ -7,7 +7,7 @@ var sass = require('gulp-sass');
 var autoprefixer = require('gulp-autoprefixer');
 var sourcemaps = require('gulp-sourcemaps');
 var concat = require('gulp-concat');
-var concatCss = require('gulp-concat-css');
+var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
 var browserSync = require('browser-sync');
 var imagemin = require('gulp-imagemin');
@@ -19,7 +19,6 @@ var cache = require('gulp-cache');
 var SOURCE = './src/';
 var DEST = './dist/';
 var JS_OUTPUT_FILE = 'main.js';
-var WATCH_FILE_EXTENSIONS = ['*.html'];
 
 gulp.task('browser-sync', function() {
   browserSync({
@@ -50,14 +49,10 @@ gulp.task('build-css', function() {
     .pipe(gulp.dest(DEST + 'css/'))
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest(DEST + 'css/'))
-    .pipe(browserSync.reload())
-		// .pipe(browserSync.reload({
-    //   stream: true
-    // }))
+    .pipe(gulp.dest(DEST + 'css/'));
 });
 
-gulp.task('javascript', function() {
+gulp.task('build-js', function() {
 	gulp.src(SOURCE + 'js/**/*.js')
     .pipe(sourcemaps.init())
     .pipe(concat(JS_OUTPUT_FILE))
@@ -85,17 +80,32 @@ gulp.task('include-retina', function() {
   return gulp.src(SOURCE + '*.html')
     .pipe(imgRetina())
     .on('error', function(e) {
-      console.log(e.message);ß
+      console.log(e.message);
     })
     .pipe(gulp.dest(DEST));
 });
 
-gulp.task('default', ['browser-sync', 'optimize-images', 'include-retina'], function() {
-  gulp.watch(SOURCE + 'js/**/*.js', ['build-js']);
-  gulp.watch(SOURCE + 'scss/*.scss', ['build-css']);
-  gulp.watch(SOURCE + 'scss/**/*.scss', ['build-css']);
-  gulp.watch(SOURCE + '*.html', ['include-retina']);
-	// browserSync.reload();
-	// gulp.watch(SOURCE + '*.html', ['views']);
-  gulp.watch(WATCH_FILE_EXTENSIONS, ['bs-reload']);
+gulp.task('vendorStyles', function () {
+  return gulp.src(SOURCE + 'vendor/**/*.css')
+  	.pipe(concat('vendor.css'))
+	  .pipe(gulp.dest(DEST + 'vendor/'))
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(DEST + 'vendor/'));
+});
+
+gulp.task('vendorJs', function() {
+	return gulp.src(SOURCE + 'vendor/**/*.js')
+		.pipe(concat('vendor.js'))
+		.pipe(gulp.dest(DEST + 'vendor/'))
+		.pipe(rename({suffix: '.min'}))
+		.pipe(uglify())
+		.pipe(gulp.dest(DEST + 'vendor/'))
+});
+
+gulp.task('default', ['browser-sync', 'optimize-images', 'include-retina', 'vendorStyles', 'vendorJs'], function() {
+  gulp.watch(SOURCE + 'js/**/*.js', ['build-js', browserSync.reload]);
+  gulp.watch(SOURCE + 'scss/*.scss', ['build-css', browserSync.reload]);
+  gulp.watch(SOURCE + 'scss/**/*.scss', ['build-css', browserSync.reload]);
+  gulp.watch(SOURCE + '*.html', ['include-retina', browserSync.reload]);
 });
