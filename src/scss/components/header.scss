@@ -2,11 +2,16 @@ header {
 	display: flex;
 	align-items: center;
 	margin-top: 15px;
+	position: relative;
 	@include grid-container;
 
 	.header-logo {
 		@include media("<=tablet") {
 			@include grid-column(6);
+			img {
+				max-width: 80px;
+				height: auto;
+			}
 		}
 		@include media(">tablet") {
 			@include grid-column(2);
@@ -15,24 +20,111 @@ header {
 			@include grid-column(3);
 		}
 	}
-	.header-menu {
+
+	nav.header-menu {
+		text-align: center;
+
 		@include media("<=tablet") {
-			display: none;
+			order: 3;
+			@include grid-column(2);
+			.hamburger-container {
+				display: block;
+			}
+			#menu {
+				display: none;
+				position: absolute;
+			}
+
 		}
 		@include media(">tablet") {
 			@include grid-column(8);
+			.hamburger-container {
+				display: none;
+			}
 		}
 		@include media(">=desktop-hd") {
 			@include grid-column(6);
 		}
-		text-align: center;
-		ul {
+
+		.hamburger-container {
+		  width: 30px;
+		  height: 30px;
+		  cursor: pointer;
+     	float: right;
+
+			ul.hamburger {
+				margin: 0;
+		    padding: 0;
+		    list-style-type: none;
+				li {
+				  height: 3px;
+					background-color: $orange;
+					border-radius: 10px;
+				  content: "";
+				  position: relative;
+				  transition: 0.25s ease-in-out;
+
+					&:nth-child(1) {
+						top: 0;
+					}
+					&:nth-child(2) {
+						top: 6px;
+						margin-left: 33%;
+					}
+					&:nth-child(3) {
+						top: 12px;
+						margin-left: 66%;
+					}
+				}
+			}
+		}
+		.hidden {
+		  opacity: 0;
+		}
+		.rot45deg {
+		  transform: rotate(45deg);
+		  top: 9px !important;
+			margin-left: 0 !important;
+		}
+		.rot-45deg {
+		  transform: rotate(-45deg);
+			margin: 0;
+			margin-left: 0 !important;
+		}
+
+		ul#menu {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
 			list-style-type: none;
 		  margin: 0;
 		  padding: 0;
+			@include media("<=tablet") {
+				position: absolute;
+				display: none;
+				left: 0;
+				right: 0;
+		    top: 50px;
+		    background-color: white;
+				justify-content: flex-end;
+				z-index: 1;
+				box-shadow: 0 10px 20px 0 rgba(0,0,0,0.10);
+
+				li {
+					height: 40px;
+					display: flex;
+					align-items: center;
+					margin: 0 20px;
+					border-top: 1px solid #E5ECEF;
+					div {
+						width: 46px;
+						height: 40px;
+						display: flex;
+						align-items: center;
+						justify-content: center;
+					}
+				}
+			}
 			li {
 				img {
 					margin-right: 5px;
@@ -51,9 +143,11 @@ header {
 			}
 		}
 	}
+
 	.header-lang {
 		@include media("<=tablet") {
-			@include grid-column(6);
+			@include grid-column(4);
+			order: 2;
 		}
 		@include media(">tablet") {
 			@include grid-column(2);

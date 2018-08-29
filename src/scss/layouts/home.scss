@@ -18,6 +18,15 @@
 	align-items: center;
 }
 
+.section-padding {
+	@include media("<tablet") {
+		padding-top: 30%;
+	}
+	@include media(">=tablet") {
+		padding-top: 10%;
+	}
+}
+
 section#hero {
 	@include grid-container;
 	display: flex;
@@ -39,12 +48,25 @@ section#hero {
 		padding-bottom: 0;
 	}
 	.image {
+		position: relative;
 		@include media("<=tablet") {
 			@include grid-column(12, $neat-grid-nogap);
+			.slider {
+				position: absolute;
+				width: 86%;
+		    margin-left: 7%;
+		    top: 2%;
+			}
 		}
 		@include media(">tablet") {
 		  @include grid-column(8);
 		  @include grid-push(2);
+			.slider {
+				position: absolute;
+				width: 47%;
+		    margin-left: 26%;
+		    top: 8.5%;
+			}
 		}
 		img {
 			width: 100%;
@@ -65,7 +87,8 @@ section#hero {
 }
 
 section#providers {
-	padding-top: 10%;
+	$logo-cols: 6;
+	@extend .section-padding;
 	display: flex;
 	flex-direction: column;
 	.title {
@@ -83,7 +106,6 @@ section#providers {
 	}
 	.logos {
 		@include media("<tablet") {
-		  // @include grid-column(12);
 			padding: 20px 0;
 			margin: 20px 0;
 		}
@@ -101,25 +123,43 @@ section#providers {
 			list-style-type: none;
 		  margin: 0;
 		  padding: 0;
-
 			@include media("<tablet") {
-				width: calc(120px * 6);
+				width: calc(120px * #{$logo-cols} + (#{$logo-cols} * 1px + 1px));
 				max-height: 240px;
 				height: 240px;
 				display: flex;
 				flex-wrap: wrap;
 				margin-left: 20px;
+				margin-right: 20px;
 			}
 			@include media(">=tablet") {
 				@include grid-collapse;
 			}
 			li {
-
 				@include media("<tablet") {
 					width: 120px;
 					height: 120px;
-					border: none;
-					outline: 1px solid #E5ECEF;
+					&:nth-child(-n+#{$logo-cols}) {
+						border-left: 1px solid #E5ECEF;
+						border-top: 1px solid #E5ECEF;
+						border-right: none;
+						border-bottom: none;
+					}
+					&:nth-child(n+#{$logo-cols}) {
+						border-left: 1px solid #E5ECEF;
+						border-top: 1px solid #E5ECEF;
+						border-right: none;
+						border-bottom: 1px solid #E5ECEF;
+					}
+					&:nth-child(#{$logo-cols}) {
+						border-left: 1px solid #E5ECEF;
+						border-top: 1px solid #E5ECEF;
+						border-right: 1px solid #E5ECEF;;
+						border-bottom: none;
+					}
+					&:last-child {
+						border: 1px solid #E5ECEF;
+					}
 					img {
 						max-width: 100px;
 						max-height: 100px;
@@ -158,12 +198,7 @@ section#providers {
 }
 
 section#wasistpays {
-	padding-top: 10%;
-	// display: flex;
-	// flex-wrap: wrap;
-	// justify-content: center;
-	// align-items: center;
-	// flex-direction: column;
+	@extend .section-padding;
 	.content {
 		@include media("<desktop") {
 			@include grid-column(12);
@@ -215,7 +250,7 @@ section#vorteile {
 		@include grid-column(6);
 		@include grid-push(3);
 	}
-	padding-top: 10%;
+	@extend .section-padding;
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
@@ -242,11 +277,9 @@ section#vorteile {
 			}
 			@include media(">=tablet") {
 				@include grid-column(6);
-				// margin-bottom: 25px;
 			}
-			@include media(">=desktop") {
+			@include media(">desktop-sd") {
 				@include grid-column(4);
-				// margin-bottom: 50px;
 			}
 			opacity: .8;
 			display: flex;
@@ -280,8 +313,8 @@ section#vorteile {
 }
 
 section#funktioniert {
+	@extend .section-padding;
 	width: 100%;
-	padding-top: 10%;
 	max-width: 100%;
 	overflow: hidden;
 	display: flex;
@@ -414,16 +447,31 @@ section#funktioniert {
 			opacity: 0;
 			transition-property: transform, opacity;
 			transform: translate(400px);
-			&.aos-animate {
-				transform: translate(40px);
-				opacity: 1;
+			@include media("<desktop") {
+				&.aos-animate {
+					transform: translate(140px, -40px);
+					opacity: 1;
+				}
+			}
+			@include media(">=desktop") {
+				&.aos-animate {
+					transform: translate(40px);
+					opacity: 1;
+				}
 			}
 		}
 		[data-aos="phone-rotate"] {
 			transform: rotate(0);
 			transition-property: transform;
-			&.aos-animate {
-				transform: rotate(-16deg);
+			@include media("<desktop") {
+				&.aos-animate {
+					transform: rotate(-24deg);
+				}
+			}
+			@include media(">=desktop") {
+				&.aos-animate {
+					transform: rotate(-16deg);
+				}
 			}
 		}
 	}
