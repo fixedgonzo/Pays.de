@@ -1,10 +1,26 @@
+// Bootstrap 4 components
+// Required
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+@import "./node_modules/bootstrap/scss/dropdown";
+
+// Optional
+// @import "./node_modules/bootstrap/scss/reboot";
+// @import "./node_modules/bootstrap/scss/type";
+// @import "./node_modules/bootstrap/scss/images";
+// @import "./node_modules/bootstrap/scss/code";
+// @import "./node_modules/bootstrap/scss/grid";
+
+// Anything else
 @import "plugins/neat/_neat.scss";
 @import "plugins/_include-media.scss";
 @import 'plugins/fluid-aspect';
 
+// Core code
+@import 'base/normalize';
 @import 'base/variables';
 @import 'base/typography';
-@import 'base/normalize';
 @import 'base/global';
 
 @import 'components/header';
@@ -12,3 +28,4 @@
 @import 'components/assets';
 
 @import 'layouts/home';
+@import 'layouts/coupon';

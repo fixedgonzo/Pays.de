@@ -1,1309 +1,209 @@
-
 <!DOCTYPE html>
-<html lang="de">
-	<head>
-		<!-- Google Tag Manager -->
-		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-		})(window,document,'script','dataLayer','GTM-N38VCPB');</script>
-		<!-- End Google Tag Manager -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width">
-
-
-
-		<title>e-plus</title>
-		    <meta name="robots" content="index, follow">
-	    <meta name="revisit-after" content="5 days">
-
-				<meta name="keywords" content="e-plus, eplus prepaid">
-
-				<meta name="description" content="Bei Pays habt Ihr die exklusive Möglichkeit unkompliziert, schnell und einfach für E-Plus Aufladekarten in Form von Gutscheinen zu kaufen. Kauf auf Rechnung">
-		    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
-	    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	    	    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
-	    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-	    <link rel="stylesheet" href="css/flag-icon.min.css">
-    	<style>
-	/**
-	 *
-	 * 	TABLE OF CONTENTS
-	 *
-	 ********************************
-	 *
-	 *	1. Overall styling
-	 *  2. Header
-	 * 	3. Footer
-	 *  4. Buttons
-	 */
-
-	/**
-	 * fonts
-	 */
-	@font-face{
-		font-family: 'MinionPro';
-		font-style: normal;
-		font-weight: 400;
-		src: url(../fonts/MinionPro-Regular.otf) format('otf');
-	}
-	@font-face{
-		font-family: 'MyriadPro-Black';
-		font-style: bold;
-		font-weight: 600;
-		src: url('../fonts/MyriadPro-Black.otf') format('otf');
-	}
-	@font-face{
-		font-family: 'MyriadPro-BoldSemiExt';
-		font-style: bold;
-		font-weight: 600;
-		src: url(../fonts/MyriadPro-BoldSemiExt.otf) format('otf');
-	}
-	@font-face{
-		font-family: 'MyriadPro-Light';
-		font-style: normal;
-		font-weight: 400;
-		src: url(../fonts/MyriadPro-Light.otf) format('otf');
-	}
-	@font-face{
-		font-family: 'MyriadPro-LightSemiExt';
-		font-style: normal;
-		font-weight: 400;
-		src: url('../fonts/MyriadPro-LightSemiExt.otf') format('otf');
-	}
-	@font-face{
-		font-family: 'Roboto-Light';
-		font-style: normal;
-		font-weight: 300;
-		src: url(../fonts/Roboto-Light.ttf) format('ttf');
-	}
-	@font-face{
-		font-family: 'Roboto-Regular';
-		font-style: normal;
-		font-weight: 400;
-		src: url(../fonts/Roboto-Regular.ttf) format('ttf');
-	}
-
-	/**
-	 *	1. Overall styling
-	 */
-	body, *{
-		font-family: 'MyriadPro-LightSemiExt', sans-serif;
-		color: #003e5b;
-	}
-
-	body strong {
-		font-family: 'MyriadPro-Black', sans-serif;
-	}
-
-	body {
-		padding-top: 115px;
-	}
-	body.start {
-		padding-top: 100px;
-	}
-	@media and screen (max-width: 420px) {
-
-	}
-
-	body.admin{
-		padding-top: 0px;
-	}
-
-	a:hover{
-		text-decoration: none;
-	}
-
-	.error{
-		display: none;
-		font-size: 11px;
-		color: #880000;
-	}
-
-	.msg{
-		display: none;
-		font-size: 12px;
-		color: #008800;
-	}
-
-	.impossible {
-		opacity: 0.5;
-		color: #880000;
-	}
-
-	.info-display {
-		padding-top: 5px;
-		padding-bottom: 5px;
-		font-size: 18px;
-		margin-bottom: 5px;
-		border-radius: 4px;
-	}
-
-
-	/**
-	 * 	2. Header
-	 */
-	header{
-		background: #fff;
-		font-size: 1.2em;
-		position: fixed;
-		top: 0;
-		width: 100%;
-		z-index: 1000;
-	}
-	header .wrapper-header{
-		background-color: #fff;
-		color: grey;
-		border-bottom: 1px solid #ccc;
-	}
-	header .brand{
-		font-size: 16px;
-		font-weight: 600;
-	}
-	header a.btn{
-		font-size: 18px;
-		padding: 7px 5px;
-		margin: 16px auto 0;
-		background: #fff;
-		border: 2px solid #003e5b;
-		border-radius: 8px;
-		color: #003e5b;
-		text-transform: uppercase;
-		display: inline-block;
-		width: 100%;
-		text-align: center;
-	}
-	header a:hover{
-		/**background: #ececec;
-		color: #000;*/
-	}
-	header a.btn.activebtn, header a.btn.activebtn *{
-		background: #003e5b;
-		color: #fff;
-	}
-
-	header .row.smaller-spaced div[class*="col-"] {
-		padding-left: 3px;
-		padding-right: 3px;
-	}
-	header .brandwrapper{
-		padding-top: 14px;
-		padding-bottom: 14px;
-	}
-	header .headerBtn{
-		padding-left: 3px;
-		padding-right: 3px;
-	}
-
-	header ul.unstyled.menu li {
-		display: inline-block;
-		float: left;
-		/**width: 25%;*/
-		padding: 0px 3px;
-	}
-	header ul.unstyled.menu:after{
-		clear: both;
-		display: table;
-		content: '';
-	}
-
-	header a.btnMenu{
-		margin: 5px;
-		padding: 5px 10px;
-		font-size: 30px;
-		display: inline-block;
-		border-radius: 5px;
-	}
-	header a.btnMenu:active, header a.btnMenu:focus {
-		background: none;
-	}
-	/*
-	header .row.smaller-spaced div[class*="col-"]:last-of-type {
-		padding-right: 15px;
-	}
-	*/
-
-	@media screen and (max-width: 991px) {
-
-		header ul.unstyled.menu{
-			display: none;
-		}
-		header ul.unstyled.menu.open{
-			display: block;
-			margin-bottom: 15px;
-		}
-
-		header ul.unstyled.menu li {
-			width: 100%;
-			max-width: 200px;
-		}
-	}
-	@media screen and (max-width: 768px) {
-		header .brand{
-			text-align: center;
-			display: inline-block;
-			width: 100%;
-		}
-		.wrapper-header{
-			/*padding-bottom: 10px;*/
-		}
-		header .row.smaller-spaced div[class*="col-"]:last-of-type {
-			padding-right: 3px;
-		}
-		header .row.smaller-spaced div[class*="col-"] div.row {
-			margin-left: -3px;
-			margin-right: -3px;
-		}
-		header a.btn{
-			padding: 4px 4px;
-			margin: 10px auto 0;
-			font-size: 14px;
-		}
-		header .brandwrapper{
-			padding-top: 10px;
-			padding-bottom: 0px;
-			margin-bottom: -5px;
-		}
-
-		header{
-			position: relative;
-		}
-		header .headerBtn{
-			padding-left: 15px;
-			padding-right: 15px;
-		}
-
-		header img.img-responsive {
-		    margin: 0px auto!important;
-		    width: 50%;
-		    max-height: 40px;
-		    width: auto;
-		}
-
-		header ul.unstyled.menu li {
-			width: 100%;
-		}
-
-		header ul.unstyled.menu{
-			display: none;
-		}
-		header ul.unstyled.menu.open{
-			display: block;
-		}
-
-		body, body.start {
-			padding-top: 0px;
-		}
-
-		a.btn {
-			margin-top: 10px;
-			display: inline-block;
-		}
-	}
-
-
-	/**
-	 *	3. Footer
-	 */
-	footer{
-		font-size: 12px;
-		position: relative;
-		padding-top: 10px;
-	    width: 100%;
-	    border-top: 1px solid #ececec;
-	    background: #ffffff;
-	    margin-top: 15px;
-	}
-
-	footer *{
-		font-family: 'Quicksand', sans-serif;
-	}
-
-	footer .wrapper-footer{
-		background-color: #fff;
-		color: grey;
-		padding-top: 15px;
-		padding-bottom: 25px;
-	}
-
-	footer.to-bottom{
-		position: fixed;
-		bottom: 0px;
-		left: 0px;
-		width: 100%;
-	}
-
-	footer h4{
-		font-size: 14px;
-		padding-bottom: 5px;
-		border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-		margin-bottom: 10px;
-	}
-
-	footer h5{
-		padding-top: 15px;
-		font-family: 'Quicksand', sans-serif;
-		border-bottom: 1px solid #ccc;
-    	font-size: 14px;
-    	font-weight: normal;
-    	margin: 0 0 15px;
-    	text-align: center;
-	}
-
-	footer .copyright{
-		font-size: 13px;
-		margin-top: 15px;
-	}
-
-	footer a{
-		font-family: 'Quicksand', sans-serif;
-		font-size: 14px;
-		text-decoration: none;
-		color: #424242;
-	}
-
-	footer a:hover{
-		text-decoration: none;
-		color: #2ba2d9;
-		transition: all 0.5s;
-		-webkit-transition: all 0.5s;
-	}
-
-	footer hr{
-		height: 50px;
-		border-top: none;
-		border-bottom: 1px solid #ececec;
-		margin-bottom: 25px;
-	}
-	footer .infoblock{
-		color: #424242;
-	}
-	footer .testemonial-img, footer .testemonial-text{
-		padding: 10px;
-	}
-	footer .testemonial-wrapper{
-		position: relative;
-	}
-	footer .testemonial-block {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		opacity: 0;
-	}
-	footer .testemonial .fa {
-		font-weight: bold;
-		line-height: 30px;
-		font-size: 18px;
-		cursor: pointer;
-	}
-
-	@media screen and (max-width:420px) {
-		footer .footer-block {
-			margin-top: 10px;
-			margin-bottom: 10px;
-		}
-	}
-
-	@media screen and (min-width:401px) and (max-width:767px){
-		footer .footer-block{
-			width: 50%;
-		}
-	}
-
-
-
-	ul.unstyled{
-		margin: 0;
-		padding: 0;
-		list-style-type: none;
-	}
-	ul.unstyled li{
-		margin: 0;
-		padding: 0;
-	}
-
-	.internal-pagination{
-		text-align: center;
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-
-	.internal-pagination a, a.btn, a.btn.btn-primary, button.btn-primary{
-		padding: 5px 10px;
-		border-radius: 5px;
-		border: none;
-		background: #003e5b;
-		color: #ffffff;
-		text-transform: uppercase;
-	}
-	.internal-pagination a:hover{
-		text-decoration: none;
-	}
-	.shop-row{
-		margin-bottom: 15px;
-		margin-top: 15px;
-	}
-	@media screen and (max-width: 768px) {
-		.internal-pagination a, a.btn, a.btn.btn-primary, button.btn-primary, a.btn {
-			margin-top: 10px;
-			display: inline-block;
-		}
-
-		.shop-block{
-			padding: 15px;
-		}
-
-		h2.basket-info{
-			font-size: 24px;
-		}
-
-		.shop-display {
-			display: inline-block!important;
-		}
-	}
-
-
-	#orders-screen #items-wrapper-orders{
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-
-	#orders-screen .item-order {
-		background: #f3f3f3;
-		border: 1px solid rgba(0, 0, 0, 0.3);
-		margin-bottom: 5px;
-		cursor: pointer;
-	}
-	#orders-screen .item-order:last-of-type{
-		margin-bottom: 0;
-	}
-	#orders-screen .item-order .coupons-row{
-		border-top: 1px solid rgba(0, 0, 0, 0.1);
-		/*background: #fff;*/
-	}
-
-	.bootstrap-select *{
-		text-align: center !important;
-	}
-	@media screen and (min-width: 992px) and (max-width: 1024px) {
-		header a.btn {
-			font-size: 16px;
-		}
-	}
-</style>    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/css/bootstrap-select.min.css">
-    	<style>
-    		/*################################  2017-11-07  basics ##################################*/
-
-body { color:#003E5B;  font-size:14px; }
-
-body.start  {font-size:18px; }
-
-
-
-.flexk { display: flex;	flex-wrap: wrap; flex-direction: row;}
-
-a {color:#003E5B;}
-
-h1 {  }
-
-h6 {    border-bottom: 1px solid #ccc;    font-size: 14px;    font-weight: normal;    margin: 0 0 15px;    text-align: center;}
-
-h7 { color: #003087; font-size:60px; font-weight:bold;}
-
-h8 { color: #ce007e;  font-size:80px;  font-weight:bold;}
-
-h9 { color: #003087;  font-size:20px; }
-
-.slideright h1 {   color:#fff; font-size: 32px; margin: 0; font-weight:bold;}
-
-.slideright h2 {  font-size: 22px; margin: 0; font-weight:bold;}
-
-.slideright h3 {    font-size: 14px; margin: 15px 0 0 0; font-weight:bold;}
-
-li {    list-style: outside none none;    margin: 10px;    text-align: left;}
-
-.lightk  { color: #2ba2d9; }
-
-/*################################  2017-11-07 DIVs ##################################*/
-
-
-.homeh1 {width:100%; text-align:center; margin:30px 0 0 0;}
-
-.fuller {   width: 100%;}
-
-.conttre {    border: 1px solid #ececec;    margin: 30px auto;    min-width: 250px;    padding: 18px 0 15px;    text-align: center;    width: 30%;}
-
-.smallk {padding:0px;}
-
-.spacer {width:100%; height:50px;}
-
-.contfull {width:75%; min-width:300px; padding:20px; background:#fff; margin:0 auto; font-size:20px; text-align:center;}
-
-.img-responsive {margin:0!important;  width:50%;}
-
-.brand {text-align:left;}
-
-.halfk {width:50%; background:#fff; padding:10px; text-align:center;}
-
-.halfk2 {width:45%;  min-width:280px; background:#fff; padding:10px 20px; text-align:center; border-radius:10px; margin:10px auto; border:1px solid #ccc; padding:10px;}
-
-
-/*################################  2017-11-15 HOME ##################################*/
-
-.partners {padding:40px 0; width:75%;  border-top:1px solid #003e5b; border-bottom:1px solid #003e5b; margin:20px auto; text-align:center;}
-
-.partnerslogo {width:80%; max-width:800px; margin:0 auto;}
-
-.contks {  margin:0 auto; width:95%; max-width:1150px;}
-
-.dreik { width:30%;   margin:0px auto 20px;}
-
-
-
-.centerdiv {text-align:center;  font-size:14px;}
-
-.smallpic { width:75%; min-width:250px; max-width:750px; margin:0 auto;}
-
-.superspace {margin-top:25px; margin-bottom:100px;}
-
-.kreis {
-    margin: -85px auto 0 auto;
-    background: none repeat scroll 0% 0% #003E5B;
-    color: #FFF;
-    width: 140px;
-    height: 140px;
-    border-radius: 140px;
-    font-size: 20px;
-    padding: 28px 0px 0px;
-    border: 3px solid #fff;
-}
-
-
-
-.roundk {
-    width: 75px;
-    height: 75px;
-    margin: 10px auto;
-    border-radius: 75px;
-    border: 3px solid #003E5B;
-    padding: 18px 0 0 0;
-}
-
-.fa-mobile {
-    margin: -12px;
-}
-
-
-
-
-.homebutt {
-    background: #003E5B;
-    border: medium none;
-    padding: 10px 20px;
-    color: #FFF;
-    border-radius: 10px;
-    text-transform: uppercase;
-}
-
-
-/*################################  2017-11-21 Slider  ##################################*/
-
-
-@media  (min-width: 1px) {
-.slider {    background-image: url(/img/uploads/2017_11_21_pays_hintergrund.jpg);    background-repeat: no-repeat;    width: 100%;    min-height: 200px; background-size: cover;  padding:30px 0; margin-top: -20px;}
-.k2 {  background-image: url(/img/uploads/2017_11_21_splitter.png);   background-size: cover;  background-repeat: no-repeat;  width: 280px;  margin:0  auto;   padding: 35px 0; height:160px; }
-.k3 {    text-align:center;  width: 100%;       margin: 0 auto;}
-.k3 h3 {    font-size: 48px;    margin: 0;    color: #cf007e;    font-weight: bold;}
-.logoslide { width:100px; margin:10px 0;}
-.sliderbutt {margin: 0; font-size:16px;}
-.bigfont {font-size:20px;}
-.spacerkap {width:100%; background:green; height:20px;}
-}
-
-@media  (min-width: 450px) {
-.k2 {   width: 350px;  margin:0  auto;   padding: 50px 0; height:200px; }
-.k3 {    text-align:center;  width: 100%;       margin: 0 auto;}
-.k3 h3 {    font-size: 52px;    margin: 0;    color: #cf007e;    font-weight: bold;}
-}
-
-
-@media  (min-width: 992px) {
-.k2 {   width: 750px;  margin:0  auto;   padding: 100px 0; height:432px; }
-.k3 {    text-align:center;  width: 100%;       margin: 0 auto;}
-.k3 h1 {    font-size: 40px;    margin: 9px;}
-.k3 h2 {font-size:40px; font-weight:bold; margin:0;}
-.k3 h3 {    font-size: 70px;    margin: 0;    color: #cf007e;    font-weight: bold;}
-.logoslide { width:300px; margin:10px 0;}
-.sliderbutt {margin: 20px 0 0 0; font-size:26px;}
-.bigfont {font-size:22px;}
-}
-
-
-
-
-.col-xs-12.col-sm-6.col-md-4.footer-block.testemonial {
-    display: none;
-}
-
-label {  font-size:12px; text-align:left;}
-
-html body div.container-fluid.error.error-limit-reached div.container div.row div.col-xs-12.text-right strong {color:red; font-size:18px;}
-
-
-.spacetext  {width:100%;  height:50px;}
-
-.btnky {
-    background: #003e5b;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-transform: uppercase;
-}
-
-
-
-
-/*################################  2018-03-27 Font Startseite  ##################################*/
-
-
-@media  (min-width: 1px) {
-.k3 h1 { font-size: 21px;  margin: 9px;}
-.k3 h2 {    font-size: 19px;    font-weight: bold;    margin: 0;}
-.contks div.centerdiv.smallpic.superspace {width:100%;}
-}
-
-
-
-@media  (min-width: 450px) {
-
-}
-
-@media  (min-width: 620px) {
-.k3 h1 { font-size: 26px;}
-.k3 h2 {    font-size:24px;  }
-.contks div.centerdiv.smallpic.superspace {width:75%;}
-}
-
-@media  (min-width: 995px) {
-.k3 h1 { font-size: 50px;}
-.k3 h2 {    font-size:48px;  }
-}
-
-
-
-.toshop {
-padding: 5px 10px;
-border-radius: 5px;
-border: none;
-background: #003e5b;
-color: #ffffff;
-text-transform: uppercase;
- }
-
-
-
-/*################################  2018-04-03 Startseite  ##################################*/
-
-
-@media  (min-width: 1px) {
-.centdivk {text-align:center; margin:40px 0;}
-.centdivk h1 {margin:0 0 40px 0; font-size:20px;}
-.vorteile {width:12%; min-width:125px; margin:0 auto 40px auto; }
-.dreikay {width:100%; margin:0 auto; max-width:600px; }
-.maxwidthkay {  background: #003E5B;   width: 100%;    max-width: 740px;    margin: 0px auto;    padding: 3px;    color:#fff;}
-.homepix {width:100%; max-width:800px; margin:0 0 40px 0;}
-}
-
-
-@media  (min-width: 480px) {
-.centdivk { margin:60px 0;}
-.centdivk h1 {margin:0 0 60px 0; font-size:24px;}
-.vorteile {margin:0 auto 60px auto; }
-.homepix {margin:0 0 60px 0;}
-}
-
-@media  (min-width: 640px) {
-.centdivk { margin:70px 0;}
-.centdivk h1 {margin:0 0 70px 0; font-size:30px; }
-.vorteile {margin:0 auto 70px auto; }
-.homepix {margin:0 0 70px 0;}
-}
-
-
-@media  (min-width: 800px) {
-.centdivk { margin:80px 0;}
-.centdivk h1 {margin:0 0 80px 0; font-size:36px;}
-.vorteile {margin:0 auto 80px auto; }
-.homepix {margin:0 0 80px 0;}
-}
-
-@media  (min-width: 1200px) {
-.centdivk { margin:100px 0;}
-.centdivk h1 {margin:0 0 100px 0; font-size:48px; }
-.vorteile {margin:0 auto 100px auto; }
-.homepix {margin:0 0 100px 0;}
-}
-
-
-
-/*################################  2018-04-25 Button für Shop Outklicks  ##################################*/
-
-div.col-xs-12 h2.text-center {  text-transform:uppercase;}
-
-
-.centerk {text-align:center; width:100%;}
-
-.shopout {
-  background:#337AB7;
-  border:none;
-  color:#FFFFFF;
-  padding:10px 30px;
-  text-transform:uppercase;
-}
-
-
-
-.verify-next {background:#003E5B; text-transform:uppercase; border:none;  color:#FFFFFF;  padding:10px 20px;}
-
-button#btnStart.btn.btn-info.form-control {background:#003E5B;  color:#FFFFFF; }
-
-
-.xs2a-submit {background:#003E5B; text-transform:uppercase; border:none;  color:#FFFFFF;  padding:10px 20px;}
-
-.verify-back  {background:#ccc; text-transform:uppercase; border:none;  color:#FFFFFF;  padding:10px 20px;}
-
-
-
-
-html body div.container-fluid div.container div.row div.col-xs-12.col-md-4.text-center div.row
- {background:#eee; margin:20px 10px; padding:1px solid #ccc; padding:10px;}
-
-
-
-/*################################wie funktioniert es########################*/
-
-
-.funcwith {width:100%; max-width:800px;  margin:0 auto;}
-
-.lefttop {background:#003E5B; color:#fff; width:54%; margin:10px auto; height:80px; border-radius: 30px 0 0 0;}
-
-.righttop {border:1px solid #003E5B; width:45%; margin:20px auto; height:60px; border-radius: 0 30px 0 0;}
-
-.leftmiddle {background:#003E5B;  color:#fff; width:54%; margin:10px auto; height:80px;}
-
-.rightmiddle {border:1px solid #003E5B; width:45%; margin:20px auto; height:60px;}
-
-.leftbottom {background:#003E5B;  color:#fff; width:54%; margin:10px auto;  border-radius: 0 0 0 30px; height:80px;}
-
-.rightbottom  {border:1px solid #003E5B; width:45%; margin:20px auto; height:60px; border-radius: 0 0 30px 0; }
-
-.iconkl i.fas {color:#fff;}
-
-
-@media screen and (min-width: 1px) {
-.numbk  {font-size: 30px; font-weight: bold; color:#fff; text-align: center; width: 25%; margin: 20px 0 0 0; }
-.fa-3x {    font-size: 2em;    margin: 10px 0 0 0;}
-.textgk {    width: 50%;    color: #fff;    font-size: 14px;    margin: 7px 0 0 0;    text-align: left;    padding: 8px 0 0 7px;}
-.iconkl {text-align: center;  color:#fff;  margin: 12px 0 0 0; width:20%;}
-.textgkright { width:70%; font-size: 12px; margin: 4px 0 0 7px; text-align:left;}
-.iconkright {text-align: center; margin: 5px 0 0 0; width:25%;}
-}
-
-
-@media screen and (min-width: 600px) {
-.numbk  {font-size: 50px; font-weight: bold; color:#fff; text-align: center; width: 25%; margin: 5px 0 0 0; }
-.fa-3x {    font-size: 3em; }
-.textgk {    width: 50%;    color: #fff;    font-size: 18px;    margin: 7px 0 0 0;    text-align: left;    padding: 8px 0 0 7px;}
-.iconkl {text-align: center;  color:#fff;  margin: 2px 0 0 0; width:20%;}
-.textgkright { width:72%; font-size: 20px; margin: -2px 0 0 0; text-align:left;}
-}
-
-
-
-@media screen and (min-width: 800px) {
-.textgk { width:50%;  color:#fff;  font-size: 24px; margin: 0 0 0 0;}
-.fa-3x {    font-size: 3em;    margin: 2px 0 0 0;}
-.iconkl {text-align: center;  color:#fff;  margin: 12px 0 0 0; width:20%;}
-.textgkright { width:72%; font-size: 20px; margin: 2px 0 0 0; text-align:left;}
-.iconkright {text-align: center; margin: 10px 0 0 0; width:25%;}
-}
-
-.vierer { width:20%; border:1px solid #ececec; border-radius:5px; padding:10px; mind-width:140px; margin:30px auto; text-align:center; }
-
-
-
-.shopad  {width:20%; margin:10px auto;  text-align:center; }
-
-.shoptext {width:100%; margin:10px 0; }
-
-
-
-.order-direct-pay a {
-    background: #ce007e;
-    text-transform: uppercase;
-    color: #fff !important;
-    font-size: 12px;
-    border-radius: 5px;
-   padding:5px 10px;
-}
-
-.order-direct-pay a:hover {
-    background: #96025c;
-}
-
-
-
-.btn-lila {background:#ce007e; color:#fff; font-size:1.6em;}
-
-.btn-lila:hover { color:#ccc;}
-
-.btn-sofort {background:#ce007e; color:#fff; font-size:1.6em;}
-
-.btn-sofort:hover { color:#ccc;}
-
-
-.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {background:#fff!important;}
-
-.hiddenk {display:none;}
-
-    		.flag-dropdown {
-    			position: relative;
-    			z-index: 10;
-    			background: #fff;
-    			padding: 0px;
-    			text-align: center;
-    			display: inline-block;
-    		}
-    		.flag-dropdown .chooser .flag-icon {
-    			cursor: pointer;
-    		}
-    		ul.unstyled.menu{
-    			font-size: 16px;
-    			display: inline-block;
-    			margin-top: 25px;
-    			float: right;
-    		}
-    		ul.unstyled.menu li {
-    			margin: 5px 15px;
-    		}
-    	</style>
-	</head>
-	<body  >
-		<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N38VCPB"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-								<header>
-				<div class="container-fluid wrapper-header">
-						<div class="row">
-					<div class="container">
-						<div class="row">
-							<div class="col-xs-12">
-								<div class="row">
-									<div class="col-xs-9 col-md-3 brandwrapper">
-										<span class="brand"><a href="/" style="margin:0; padding: 0; background: none;"><img src="/img/beta.png" class="img-responsive" style="max-width: 175px;"></a>
-</span>
-									</div>
-									<div class="col-xs-3 hidden-md hidden-lg">
-										<a href="#" class="btnMenu"><i style="font-size: 24px;" class="fa fa-bars"></i></a>
-									</div>
-									<div class="col-xs-12 col-md-9">
-
-										<div class="row">
-											<div class="col-xs-12">
-												<div class="row">
-													<ul class="unstyled menu">
-														<li><a class="" href="/shops">Alle Gutscheine</a></li>
-														<li><a class="" href="/hilfe">FAQ</a></li>
-														<li>
-																																<a class="" href="/anmelden">Login</a>
-																														</li>
-														<li><a class="" href="/warenkorb">Warenkorb (<span class="basket-items">0</span>)</a></li>
-																																										<li>
-															<div class="flag-dropdown" >
-																<span class="flag-icon flag-icon-de"></span>
-																<div class="chooser" style="display:none;">
-																																																																																									<div class=""><span data-language="en" class="flag-icon flag-icon-en"></span></div>
-																																																			</div>
-															</div>
-														</li>
-													</ul>
-												</div>
-											</div>
-										</div>
-																			</div>
-								</div>
-							</div>
-						</div>
-					</div>
-						</div>
-
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Pays.de</title>
+	<meta name="description" content="">
+	<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> -->
+	<link href="vendor/vendor.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700:400,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/screen.min.css">
+	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+	<header>
+		<div class="header-logo">
+			<img src="images/pays-logo.svg" alt="">
+		</div>
+		<nav class="header-menu">
+			<div class="hamburger-container">
+				<ul class="hamburger">
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
+			</div>
+			<ul class="header-menuitems" id="menu">
+				<li>
+					<a href="#">
+						<div><img src="images/header-allegut.svg"></div>Alle Gutscheine</a>
+				</li>
+				<li>
+					<a href="#">
+						<div><img src="images/header-faq.svg"></div>FAQ</a>
+				</li>
+				<li>
+					<a href="#">
+						<div><img src="images/header-login.svg"></div>Login</a>
+				</li>
+				<li>
+					<a href="#">
+						<div><img src="images/header-warenkorb.svg"></div>Warenkorb<span class="value">(0)</span></a>
+				</li>
+				<li>
+					<a href="#">
+						<div><img src="images/header-kredupay.svg"></div>
+						<strong class="label">Neu:</strong>Kredupay</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="header-lang">
+			<a><img src="images/header-de.png"></a>
+		</div>
+	</header>
+
+	<section id="coupon">
+		<div class="coupon">
+
+			<div class="offer">
+				<div class="copy">
+					<h1>E-Plus Prepaid online kaufen</h1>
+					<p>Bei Pays habt Ihr die exklusive Möglichkeit unkompliziert, schnell und einfach für E-Plus Aufladekarten in Form von Gutscheinen zu Kaufen.</p>
+					<p>Sofort aufladen und erst in 30, optional 60 oder 90 Tagen bezahlen. Einfach eine E-Plus Aufladekarte erwerben, die in Form eines 16 stelligen Pin übermittelt wird.</p>
+					<p>Sichere Dir Deine Vorteile und kaufe online bei pays.de sofort ein. Mit dem 15.- € , 20.- € oder 30.- € Gutscheinen kannst Du nach dem Prepaidprinzip Dein E-Plus Guthaben wann und wo immer du bist aufladen.</p>
+					<p>Als erstes E-Netz in Deutschland ging E -Plus Netz im Mai 1994 auf den Markt. E-Plus war damit neben Mannesmann der zweite private Betreiber eines öffentlichen Telekommunikationsdienstes, 1997 folgte Viag Interkom (heute o2).</p>
+					<p>Mittlerweile wurde E-Plus an die spanische Telefónica verkauft. Anfang 2016 begann Telefónica mit der Zusammenlegung der vormals eigenständigen Netze von E-Plus und o2. Telefonica bietet weiterhin Top-Service für ehemalige E-Plus Kunden.</p>
+					<p>Warte nicht länger und sei immer erreichbar von zuhause, unterwegs oder wo auch immer Du bist. Mit E-Plus Prepaid und Pays.</p>
 				</div>
-			</header>
-			<div class="container-fluid" style="margin: 50px 0px;">
-	<div class="container">
-		<div class="row">
-			<div class="col-xs-12">
-							</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-5 col-md-4 text-center">
-				<img style="max-width: 100%; height: auto; width: auto; margin-left: auto; margin-right: auto;" src="/img/logos/2018_02_12_8.png">
 
-				<p class="text-center">
-					<strong>Gutschein wählen:</strong>
-				</p>
-
-				<p>
-				<select id="coupon" class="selectpicker" style="text-align: center;" data-width="100%" title="Bitte wählen ...">
-										<option selected="selected" value="346">15.00 &euro; Gutschein</option>
-										<option  value="347">20.00 &euro; Gutschein</option>
-										<option  value="348">30.00 &euro; Gutschein</option>
-									</select>
-				</p>
-
-				<p>
-					<button class="btn btn-primary form-control btn-add-to-basket">Zum Warenkorb hinzufügen</button>
-				</p>
-			</div>
-			<div class="col-xs-12 col-sm-7 col-md-8">
-				<h1>E-Plus Prepaid online kaufen</h1>
-
-
-Bei Pays habt Ihr die exklusive Möglichkeit unkompliziert, schnell und einfach für E-Plus Aufladekarten in Form von Gutscheinen zu Kaufen.
- <br> <br>
-Sofort aufladen und erst in 30, optional 60 oder 90 Tagen bezahlen. Einfach eine E-Plus Aufladekarte erwerben, die in Form eines 16 stelligen Pin übermittelt wird.
-  <br> <br>
-Sichere Dir Deine Vorteile und kaufe online bei pays.de sofort ein. Mit dem 15.- € , 20.- € oder 30.- € Gutscheinen kannst Du nach dem Prepaidprinzip Dein E-Plus Guthaben wann und wo immer du bist aufladen.
-  <br> <br>
-Als erstes E-Netz in Deutschland ging E -Plus Netz im Mai 1994 auf den Markt. E-Plus war damit neben Mannesmann der zweite private Betreiber
-eines öffentlichen Telekommunikationsdienstes, 1997 folgte Viag Interkom (heute o2).
-  <br> <br>
-Mittlerweile wurde E-Plus an die spanische Telefónica verkauft. Anfang 2016 begann Telefónica mit der Zusammenlegung der vormals
-eigenständigen Netze von E-Plus und o2. Telefonica bietet weiterhin Top-Service für ehemalige E-Plus Kunden.
-  <br> <br>
-Warte nicht länger und sei immer erreichbar von zuhause, unterwegs oder wo auch immer Du bist. Mit E-Plus Prepaid und Pays.
-
-
-
-				<div class="flexk">
-
-<div class="shoptext"><hr></div>
-
-
-<div class="shoptext"><h3>Jetzt anmelden und alle Vorteile erhalten</h3>
-Melde Dich jetzt kostenlos an, um alle Vorteile von Pays zu erhalten. Nur registrierte Mitglieder können bei Pays bestellen und später bezahlen.
-<br>
-<br>
-<a href="/anmelden"><button class="btn btn-primary">JETZT REGISTRIEREN</button></a>
-</div>
-
-
-<div class="shoptext"><hr></div>
-
-<div class="shoptext"><h3>Weitere beliebte Gutscheine und Prepaid Anbieter:</h3></div>
-
-<div class="shopad"><a href="/shop/amazon"><img width="100%" src="/img/logos/2018_02_12_38.png"><br>AMAZON</a></div>
-<div class="shopad"><a href="/shop/paysafecard"><img width="100%" src="/img/logos/2018_02_12_12.png"><br>PAYSAFECARD</a></div>
-<div class="shopad"><a href="/shop/steam"><img width="100%" src="/img/logos/2018_02_12_36.png"><br>STEAM</a></div>
-<div class="shopad"><a href="/shop/aldi-talk"><img width="100%" src="/img/logos/2018_07_12_1.png"><br>ALDI TALK</a></div>
-
-<div class="shoptext"><hr></div>
-
-<div class="shoptext"><h3>Vorteile von Pays</h3>
-Kaufe bei Pays.de einfach Gutscheine von verschiedenen Onlineshops und Guthaben für Prepaidanbieter online.
-<br>
-<br>
-Du kannst das Guthaben sofort nutzen. Aber bezahlen brauchst Du erst 30, 60 oder sogar 90 Tage später.
-<br>
-<br>
-Du erhältst eine Rechnung, welche Du per Überweisung bequem und einfach bezahlst. Pays erinnert Dich automatisch daran.
-
-</div>
-</div>
-
-
-			</div>
-		</div>
-	</div>
-</div>
-			<footer>
-				<div class="container-fluid wrapper-footer">
-					<div class="container">
-						<div>
-
-
-                                                                                    <div class="row">
-                                <div class="col-xs-12 col-md-4 footer-block testemonial">
-                                    <div class="container-fluid testemonial-block">
-                                            <div class="row">
-                                                <div class="col-xs-12 col-sm-4 col-md-3 testemonial-img">
-                                                    <img class="img-responsive" src="/img/testemonials/testemonial.png">
-                                                </div>
-                                                <div class="col-xs-12 col-sm-8 col-md-9 testemonial-text">"Ich brauchte dringend ein Geschenk für meine Freundin, aber hatte kein Geld. Also habe ich einfach einen Zalando-Gutschein auf PAYs gekauft. Auf Kredit. Hat alles super geklappt. Danke.<br><br>Torsten S. aus Berlin</div>
-                                            </div>
-                                        </div><div class="container-fluid testemonial-block">
-                                            <div class="row">
-                                                <div class="col-xs-12 col-sm-4 col-md-3 testemonial-img">
-                                                    <img class="img-responsive" src="/img/testemonials/testemonial.png">
-                                                </div>
-                                                <div class="col-xs-12 col-sm-8 col-md-9 testemonial-text">"Ich brauchte dringend ein Geschenk für meine Freundin, aber hatte kein Geld. Also habe ich einfach einen Zalando-Gutschein auf PAYs gekauft. Auf Kredit. Hat alles super geklappt. Danke.<br><br>Willi W. aus Berlin</div>
-                                            </div>
-                                        </div><div class="container-fluid testemonial-block">
-                                            <div class="row">
-                                                <div class="col-xs-12 col-sm-4 col-md-3 testemonial-img">
-                                                    <img class="img-responsive" src="/img/testemonials/testemonial.png">
-                                                </div>
-                                                <div class="col-xs-12 col-sm-8 col-md-9 testemonial-text">"Ich brauchte dringend ein Geschenk für meine Freundin, aber hatte kein Geld. Also habe ich einfach einen Zalando-Gutschein auf PAYs gekauft. Danke.<br><br>Janus T. aus Berlin</div>
-                                            </div>
-                                        </div>
-                                </div>
-                                <div class="col-xs-12 col-md-4 footer-block">
-
-                                </div>
-                                <div class="col-xs-12 col-md-4 footer-block">
-                                    <h5>Wichtige Links</h5>
-                                    <ul class="unstyled">
-                                        <li><a href="/blog" target="_blank"><i class="fa fa-angle-right"></i> News</a></li>
-                                        <li><a href="/contact"><i class="fa fa-angle-right"></i> Kontakt</a></li>
-                                        <li><a href="/privacy-policy"><i class="fa fa-angle-right"></i> Datenschutz</a></li>
-                                        <li><a href="/terms"><i class="fa fa-angle-right"></i> AGB</a></li>
-                                        <li><a href="/imprint"><i class="fa fa-angle-right"></i> Impressum</a></li>
-                                    </ul>
-                                    <h5>Social</h5>
-                                    <ul class="unstyled">
-                                        <li><a href="https://www.facebook.com/PAYs-134690923858819/" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-                                        <!--
-                                        <li><a href="#"><i class="fa fa-twitter"></i> Twitter</a></li>
-                                        <li><a href="#"><i class="fa fa-instagram"></i> Instagram</a></li>
-                                        -->
-                                    </ul>
-                                </div>
-                            </div>
-
-
-						</div>
-						<div class="row">
-							<div class="col-xs-12">
-								<hr>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-xs-12 text-center">
-								<div class="row">
-									<div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4 text-center">
-											<a href=""><img src="/img/logo.png" class="img-responsive center-block" style="display: inline-block; max-width: 100px; margin-left: auto; margin-right: auto;"></a>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="row" style="margin-top: 25px;">
-							<div class="col-xs-12 text-center infoblock">
-								&copy; 2018 Pays. Alle Rechte vorbehalten.<br>
-								Kredu GmbH • Heinrich-Heine-Platz 10 • 10179 Berlin • Deutschland<br>
-								Tel. +49 (0)30-39 91 50 10 • E-Mail: info@pays.de
-							</div>
+				<div class="buy">
+					<div class="logo">
+						<img src="http://pays.de/img/logos/2018_02_12_8.png">
+					</div>
+					<h5>Gutschein wählen:</h5>
+					<div class="dropdown">
+						<button type="button" class="orange dropdown-toggle" data-toggle="dropdown" role="button" type="button" id="couponDropdown" data-id="coupon" title="20.00 € Gutschein" aria-haspopup="true" aria-expanded="false">20.00 € Gutschein</button>
+						<div class="dropdown-menu" aria-labelledby="couponDropdown">
+							<a class="dropdown-item" href="#">20.00 € Gutschein for Amazon</a>
+							<a class="dropdown-item" href="#">30.00 € Gutschein</a>
+							<a class="dropdown-item" href="#">50.00 € Gutschein</a>
 						</div>
 					</div>
 				</div>
-			</footer>
+				<div class="registration">
+					<h4>Jetzt anmelden und alle Vorteile erhalten</h4>
+					<p>Melde Dich jetzt kostenlos an, um alle Vorteile von Pays zu erhalten. Nur registrierte Mitglieder können bei Pays bestellen und später bezahlen.</p>
+					<a href="/anmelden"><button class="btn btn-primary">JETZT REGISTRIEREN</button></a>
+				</div>
+			</div>
+	</section>
 
+	<section>
+		<div class="related">
 
-			<div class="layer-for-basket" style="position: fixed; background: #fff; border-radius: 5px; border: 1px solid rgba(0,0,0,0.25); width: 40%; min-width: 360px; max-width: 100%; display: none; min-height: 150px; padding: 15px; text-align: center;z-index:10001;">
-				<h2 class="basket-info">Der Gutschein wurde in deinen Warenkorb gelegt.</h2>
+			<div class="shopads">
+				<h3>Weitere beliebte Gutscheine und Prepaid Anbieter:</h3>
+				<div class="shopad">
+					<a href="/shop/amazon"><img width="100%" src="http://pays.de/img/logos/2018_02_12_38.png">AMAZON</a>
+				</div>
+				<div class="shopad">
+					<a href="/shop/paysafecard"><img width="100%" src="http://pays.de/img/logos/2018_02_12_12.png">PAYSAFECARD</a>
+				</div>
+				<div class="shopad">
+					<a href="/shop/steam"><img width="100%" src="http://pays.de/img/logos/2018_02_12_36.png"><br>STEAM</a>
+				</div>
+				<div class="shopad">
+					<a href="/shop/aldi-talk"><img width="100%" src="http://pays.de/img/logos/2018_07_12_1.png"><br>ALDI TALK</a>
+				</div>
+			</div>
+			<div class="description">
+				<h3>Vorteile von Pays</h3> Kaufe bei Pays.de einfach Gutscheine von verschiedenen Onlineshops und Guthaben für Prepaidanbieter online.
+				<br>
+				<br> Du kannst das Guthaben sofort nutzen. Aber bezahlen brauchst Du erst 30, 60 oder sogar 90 Tage später.
+				<br>
+				<br> Du erhältst eine Rechnung, welche Du per Überweisung bequem und einfach bezahlst. Pays erinnert Dich automatisch daran.
+			</div>
+		</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="col-xs-12 col-md-4 footer-block testemonial">
+			<div class="container-fluid testemonial-block">
 				<div class="row">
-					<div class="col-xs-12 col-sm-6">
-						<a class="btn btn-primary" href="#closeLayer">Weiter einkaufen</a>
+					<div class="col-xs-12 col-sm-4 col-md-3 testemonial-img">
+						<img class="img-responsive" src="http://pays.de/img/testemonials/testemonial.png">
 					</div>
-					<div class="col-xs-12 col-sm-6">
-						<a class="btn btn-primary" href="/warenkorb">Zum Warenkorb</a>
-					</div>
+					<div class="col-xs-12 col-sm-8 col-md-9 testemonial-text">"Ich brauchte dringend ein Geschenk für meine Freundin, aber hatte kein Geld. Also habe ich einfach einen Zalando-Gutschein auf PAYs gekauft. Auf Kredit. Hat alles super geklappt. Danke.<br><br>Torsten S. aus Berlin</div>
 				</div>
 			</div>
-			<div class="layer-shadow" style="z-index: 10000; display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8);"></div>
+			<div class="container-fluid testemonial-block">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 col-md-3 testemonial-img">
+						<img class="img-responsive" src="http://pays.de/img/testemonials/testemonial.png">
+					</div>
+					<div class="col-xs-12 col-sm-8 col-md-9 testemonial-text">"Ich brauchte dringend ein Geschenk für meine Freundin, aber hatte kein Geld. Also habe ich einfach einen Zalando-Gutschein auf PAYs gekauft. Auf Kredit. Hat alles super geklappt. Danke.<br><br>Willi W. aus Berlin</div>
+				</div>
+			</div>
+			<div class="container-fluid testemonial-block">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4 col-md-3 testemonial-img">
+						<img class="img-responsive" src="http://pays.de/img/testemonials/testemonial.png">
+					</div>
+					<div class="col-xs-12 col-sm-8 col-md-9 testemonial-text">"Ich brauchte dringend ein Geschenk für meine Freundin, aber hatte kein Geld. Also habe ich einfach einen Zalando-Gutschein auf PAYs gekauft. Danke.<br><br>Janus T. aus Berlin</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-	    <script src="js/jquery-1.11.3.min.js"></script>
-	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	    <script src="js/accounting.js"></script>
-	    <script>
+	<footer data-aos="fade-up">
+		<div id="footer-partner">
+			<div class="title">
+				<h3>Unsere Partner:</h3>
+			</div>
+			<div class="row">
+				<div><img src="images/partner-logos/logo-kredupay.svg"></div>
+				<div><img src="images/partner-logos/logo-schufa.svg"></div>
+				<div><img src="images/partner-logos/logo-fts.svg"></div>
+				<div><img src="images/partner-logos/logo-vexcash.svg"></div>
+			</div>
+		</div>
+		<div id="footer-menu">
+			<hr>
+			<ul class="menu">
+				<li>
+					<a href="#">News</a>
+				</li>
+				<li>
+					<a href="#">Kontakt</a>
+				</li>
+				<li>
+					<a href="#">Datenschutz</a>
+				</li>
+				<li>
+					<a href="#">AGB</a>
+				</li>
+				<li>
+					<a href="#">Impressum</a>
+				</li>
+			</ul>
+			<a class="facebook" href="#"><img src="images/footer-icon-facebook.svg"></a>
+			<ul class="about">
+				<li>© 2018 Pays. Alle Rechte vorbehalten.</li>
+				<li>Kredu GmbH • Heinrich-Heine-Platz 10 • 10179 Berlin • Deutschland</li>
+				<li>Tel. +49 (0)30-39 91 50 10 • E-Mail:
+					<a href="mailto:info@pays.de">info@pays.de</a>
+				</li>
+			</ul>
+		</div>
+	</footer>
 
-	    jQuery(document).ready(function($){
-	    	$('.flag-dropdown').mouseenter(function(evt){
-	    		$('.flag-dropdown .chooser').show();
-	    	});
-	    	$('.flag-dropdown').mouseleave(function(evt){
-	    		$('.flag-dropdown .chooser').hide();
-	    	});
-	    	$('.flag-dropdown .chooser .flag-icon').click(function(evt){
-	    		$('.flag-dropdown .chooser').hide();
-	    		window.location.href = '/set-language/' + $(this).attr('data-language');
-	    	});
-	    });
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script src="vendor/vendor.min.js"></script>
+	<script src="js/main.js"></script>
+</body>
 
-	    	var windowHeight, windowWidth, bodyHeight, footerOffset, footerSize, footerIsAtBottom;
-
-		    // testemonials
-		    var testemonialsHeight = 0;
-		    var testemonialId = 1;
-
-		   	// basket
-		   	var updateBasket = null;
-
-		function dateTemplate(number) {
-			var d = new Date( Number(number) * 1000 );
-
-			return d.getDate() + "." + d.getMonth() + "." + d.getFullYear();
-		}
-
-		$('.btnMenu').click(function(evt){
-			evt.preventDefault();
-			if ($('ul.unstyled.menu').hasClass('open')) {
-				$('ul.unstyled.menu').removeClass('open');
-			} else {
-				$('ul.unstyled.menu').addClass('open');
-			}
-		});
-		    	function updateSelect(selector, value) {
-		    		console.log('updateSelect ', selector, value, $(selector).length);
-		    		//console.log(selector + ' option[selected="selected"]');
-		    		//console.log(selector + ' option[value="' + value + "]");
-		    		$(selector + ' option[selected="selected"]').removeAttr('selected');
-		    		$(selector + ' option[value="' + value + '"]').attr('selected', 'selected');
-		    		$(selector).val(value);
-		    	}
-
-	    	function positionFooter(){
-	    		windowHeight = $(window).height();
-	    		bodyHeight = $('body').outerHeight();
-	    		footerOffset = $('footer').offset();
-	    		footerSize = {width: $('footer').outerWidth(), height: $('footer').outerHeight()};
-	    		footerIsAtBottom = (footerOffset.top >= windowHeight - footerSize.height) ? true : false;
-	    		console.log(windowHeight, bodyHeight, footerOffset, footerSize, footerIsAtBottom);
-				if($('footer').hasClass('to-bottom') && windowHeight <= bodyHeight + footerSize.height){
-	    			$('footer').removeClass('to-bottom');
-	    		} else if(windowHeight > bodyHeight){
-	    			$('footer').addClass('to-bottom');
-	    		}
-	    	}
-
-	    	function positionBasketLayer() {
-	    		windowHeight = $(window).height();
-	    		windowWidth = $(window).width();
-	    		layerHeight = $('.layer-for-basket').outerHeight();
-	    		layerWidth = $('.layer-for-basket').outerWidth();
-	    		$('.layer-for-basket').css('top', ((windowHeight-layerHeight)/2) + 'px');
-	    		$('.layer-for-basket').css('left', ((windowWidth-layerWidth)/2) + 'px');
-	    	}
-
-	    	function setupTestemonials() {
-		    	$('.testemonial-block').each(function(index, element){
-		    		console.log('testemonial height', $(this).outerHeight());
-		    		if ($(this).outerHeight() > testemonialsHeight) {
-		    			testemonialsHeight = $(this).outerHeight();
-		    		}
-		    		if (index == $('.testemonial-block').length - 1) {
-		    			$('.testemonial-wrapper').height(testemonialsHeight);
-		    		}
-		    	});
-	    	}
-
-		    $(document).ready(function(){
-		    	setupTestemonials();
-		    	$('.testemonial-block:nth-of-type(1)').css('opacity', 1);
-		    	positionFooter();
-		    	positionBasketLayer();
-
-		    	$(window).resize(function(){
-		    		testemonialsHeight = 0;
-		    		setupTestemonials();
-		    		positionFooter();
-		    		positionBasketLayer();
-		    	});
-
-
-		    	$('.testemonial .fa.fa-angle-double-right').click(function(){
-		    		$('.testemonial-block:nth-of-type('+testemonialId+')').animate({left: '-100px', opacity: 0}, 250, function(){
-		    			$('.testemonial-block:nth-of-type('+testemonialId+')').css('left', '0px');
-		    			testemonialId++;
-		    			if (testemonialId > $('.testemonial-block').length) {
-		    				testemonialId = 1;
-		    			}
-		    			$('.testemonial-block:nth-of-type('+testemonialId+')').css('left', '100px');
-		    			$('.testemonial-block:nth-of-type('+testemonialId+')').animate({left: 0, opacity: 1}, 250);
-		    		});
-		    	});
-
-		    	$('.testemonial .fa.fa-angle-double-left').click(function(){
-		    		$('.testemonial-block:nth-of-type('+testemonialId+')').animate({left: '+100px', opacity: 0}, 250, function(){
-		    			$('.testemonial-block:nth-of-type('+testemonialId+')').css('left', '0px');
-		    			testemonialId--;
-		    			if (testemonialId < 1) {
-		    				testemonialId = $('.testemonial-block').length;
-		    			}
-		    			$('.testemonial-block:nth-of-type('+testemonialId+')').css('left', '-100px');
-		    			$('.testemonial-block:nth-of-type('+testemonialId+')').animate({left: 0, opacity: 1}, 250);
-		    		});
-		    	});
-
-
-			    updateBasket = function updateBasket(){
-			    	var path = "/warenkorb/ajax";
-			    	$.get(path, handleResponse, "json");
-			    	function handleResponse(json) {
-			    		console.log('basket ', json);
-			    		if (json.success) {
-			    			if (undefined !== json.amountOfItems) {
-			    				$('.basket-items').html(json.amountOfItems);
-			    			}
-			    		}
-			    	}
-			    }
-
-			    showBasketLayer = function showBasketLayer() {
-			    	/*
-			    	$('.basket-layer').css('opacity', 1);
-			    	$('.basket-layer').show();
-			    	setTimeout(function(){
-			    		$('.basket-layer').animate({'opacity': 0}, 1000, function(){
-			    			$('.basket-layer').hide();
-			    		});
-			    	}, 2000);
-			    	*/
-			    	$('.layer-shadow').show();
-			    	$('.layer-for-basket').show();
-			    }
-
-			    $('a[href="#closeLayer"]').click(function(evt){
-			    	evt.preventDefault();
-			    	$('.layer-shadow').hide();
-			    	$('.layer-for-basket').hide();
-			    });
-
-		    });
-
-	    </script>
-    	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
-<script>
-	jQuery(document).ready(function($){
-		$('.btn-add-to-basket').click(function(evt){
-			evt.preventDefault();
-			var path = "/warenkorb/erweitern/ajax";
-			var data = {coupon: $('select#coupon').val()};
-			$.post(path, data, handleResponse, "json");
-			function handleResponse(json) {
-				if (json.success) {
-					updateBasket();
-					showBasketLayer();
-				}
-			}
-		});
-	});
-</script>
-	</body>
 </html>

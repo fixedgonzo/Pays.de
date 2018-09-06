@@ -9,7 +9,29 @@ button, .button {
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.10);
 	background-image: linear-gradient(-180deg, #FFFFFF 90%, #F3F3F3 99%);
 	border: 1px solid #F3F3F3;
-	color: #24333A;
+	color: #FB5101;
+
+	&.orange {
+		background-image: linear-gradient(-180deg, #FB5101 90%, #FF7022 100%);
+		color: white;
+	}
+}
+
+select, .select {
+	border-radius: 4px;
+	height: 50px;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	font-weight: 700;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.10);
+	background-image: linear-gradient(-180deg, #FFFFFF 90%, #F3F3F3 99%);
+	border: 1px solid #F3F3F3;
+	color: #FB5101;
+
+	option {
+		margin: 0 15px;
+	}
 
 	&.orange {
 		background-image: linear-gradient(-180deg, #FB5101 90%, #FF7022 100%);

@@ -1,0 +1,94 @@
+section {
+	@include media("<tablet") {
+		padding-top: 20%;
+	}
+	@include media(">=tablet") {
+		padding-top: 5%;
+	}
+
+	@include media("<desktop") {
+		@include grid-column(12);
+	}
+	@include media(">=desktop") {
+		@include grid-column(10);
+		@include grid-push(1);
+	}
+	@include media(">=desktop-hd") {
+		@include grid-column(6);
+		@include grid-push(3);
+	}
+}
+
+
+
+.coupon {
+	border-radius: 40px;
+	background-color: #FBFAFE;
+	padding: 5%;
+
+	.offer {
+		@include grid-collapse;
+		display: inline-block;
+		.copy {
+			@include media("<desktop") {
+				@include grid-column(12);
+			}
+			@include media(">=desktop") {
+				@include grid-column(7);
+			}
+			// @include media(">=desktop-hd") {
+			// 	@include grid-column(6);
+			// 	@include grid-push(3);
+			// }
+		}
+
+		.buy {
+			@include media("<desktop") {
+				@include grid-column(12);
+			}
+			@include media(">=desktop") {
+				@include grid-column(4);
+				@include grid-push(1);
+			}
+			// @include media(">=desktop-hd") {
+			// 	@include grid-column(6);
+			// 	@include grid-push(3);
+			// }
+			.dropdown {
+				button, .dropdown-menu {
+					width: 100%;
+				}
+			}
+			.logo {
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+		}
+		.registration {
+			padding-top: 5%;
+			@include media("<desktop") {
+				@include grid-column(12);
+			}
+			@include media(">=desktop") {
+				@include grid-column(4);
+				@include grid-push(1);
+			}
+		}
+	}
+
+
+	.related {
+		@include grid-collapse;
+
+		.shopads {
+			@include media("<desktop") {
+				@include grid-column(12);
+			}
+			@include media(">=desktop") {
+				@include grid-column(12);
+			}
+		}
+	}
+}
