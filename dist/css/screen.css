@@ -1,3 +1,64 @@
+@media (max-width: 767px) {
+  h1 {
+    font-size: 30px;
+    letter-spacing: -1px;
+    margin: 6% 0; }
+  h2 {
+    font-size: 24px;
+    letter-spacing: -0.8px;
+    margin: 5% 0; }
+  h3 {
+    font-size: 20px;
+    letter-spacing: -0.6px;
+    margin: 4% 0; }
+  h4 {
+    font-size: 24px;
+    letter-spacing: -0.4px;
+    margin: 3% 0; }
+  h5 {
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    margin: 2% 0; }
+  h6 {
+    font-size: 14px;
+    margin: 1% 0; }
+  p {
+    font-size: 26px; } }
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 48px;
+    letter-spacing: -1px;
+    margin: 6% 0; }
+  h2 {
+    font-size: 38px;
+    letter-spacing: -0.8px;
+    margin: 5% 0; }
+  h3 {
+    font-size: 34px;
+    letter-spacing: -0.6px;
+    margin: 4% 0; }
+  h4 {
+    font-size: 30px;
+    letter-spacing: -0.4px;
+    margin: 3% 0; }
+  h5 {
+    font-size: 24px;
+    letter-spacing: -0.2px;
+    margin: 2% 0; }
+  h6 {
+    font-size: 18px;
+    margin: 1% 0; }
+  p {
+    font-size: 26px; } }
+
+a, a:visited, a:active, a:hover {
+  color: #24333A;
+  text-decoration: none; }
+
+strong, .strong {
+  font-weight: 700; }
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -368,42 +429,10 @@ html, body {
       -ms-flex-direction: column;
           flex-direction: column; }
 
-a, a:visited, a:active, a:hover {
-  color: #24333A;
-  text-decoration: none; }
-
-strong, .strong {
-  font-weight: 700; }
-
-@media (max-width: 767px) {
-  h1 {
-    font-size: 30px;
-    letter-spacing: -1px;
-    margin: 5% 0; } }
-
-@media (min-width: 768px) {
-  h1 {
-    font-size: 48px;
-    letter-spacing: -1px;
-    margin: 5% 0; } }
-
-@media (max-width: 767px) {
-  h2 {
-    font-size: 24px;
-    letter-spacing: -1px;
-    margin: 3% 0; } }
-
-@media (min-width: 768px) {
-  h2 {
-    font-size: 38px;
-    letter-spacing: -1px;
-    margin: 3% 0; } }
-
-p {
-  font-size: 26px; }
-
-h6 {
-  font-size: 18px; }
+section {
+  width: calc(100% - 40px);
+  float: left;
+  margin-left: 20px; }
 
 .visible {
   visibility: hidden;
@@ -830,7 +859,7 @@ footer {
       footer #footer-menu ul.about li {
         padding: 10px 0; }
 
-.button {
+button, .button {
   border-radius: 4px;
   height: 50px;
   padding: 0 15px;
@@ -843,12 +872,16 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-weight: 700; }
-  .button.orange {
+  font-weight: 700;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #FFFFFF), color-stop(99%, #F3F3F3));
+  background-image: linear-gradient(-180deg, #FFFFFF 90%, #F3F3F3 99%);
+  border: 1px solid #F3F3F3;
+  color: #24333A; }
+  button.orange, .button.orange {
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #FB5101), to(#FF7022));
     background-image: linear-gradient(-180deg, #FB5101 90%, #FF7022 100%);
-    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
-            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.1);
     color: white; }
 
 .title {

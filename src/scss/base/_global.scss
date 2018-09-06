@@ -6,47 +6,8 @@ html, body {
 	flex-direction: column;
 }
 
-a, a:visited, a:active, a:hover {
-	color: $grey;
-	text-decoration: none;
-}
-
-strong, .strong {
-	font-weight: 700;
-}
-
-h1 {
-  @include media("<tablet") {
-  	font-size: 30px;
-  	letter-spacing: -1px;
-  	margin: 5% 0;
-  }
-  @include media(">=tablet") {
-  	font-size: 48px;
-  	letter-spacing: -1px;
-  	margin: 5% 0;
-  }
-}
-
-h2 {
-  @include media("<tablet") {
-    font-size: 24px;
-    letter-spacing: -1px;
-    margin: 3% 0;
-  }
-  @include media(">=tablet") {
-  	font-size: 38px;
-  	letter-spacing: -1px;
-    margin: 3% 0;
-  }
-}
-
-p {
-	font-size: 26px;
-}
-
-h6 {
-	font-size: 18px;
+section {
+  @include grid-column(12);
 }
 
 .visible {

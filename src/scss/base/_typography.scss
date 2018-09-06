@@ -1,0 +1,90 @@
+@include media("<tablet") {
+  h1 {
+    font-size: 30px;
+    letter-spacing: -1px;
+    margin: 6% 0;
+  }
+
+  h2 {
+    font-size: 24px;
+    letter-spacing: -0.8px;
+    margin: 5% 0;
+  }
+
+  h3 {
+    font-size: 20px;
+    letter-spacing: -0.6px;
+    margin: 4% 0;
+  }
+
+  h4 {
+    font-size: 24px;
+    letter-spacing: -0.4px;
+    margin: 3% 0;
+  }
+
+  h5 {
+    font-size: 18px;
+    letter-spacing: -0.2px;
+    margin: 2% 0;
+  }
+
+  h6 {
+    font-size: 14px;
+    margin: 1% 0;
+  }
+
+  p {
+  	font-size: 26px;
+  }
+}
+
+@include media(">=tablet") {
+  h1 {
+    font-size: 48px;
+    letter-spacing: -1px;
+    margin: 6% 0;
+  }
+
+  h2 {
+    font-size: 38px;
+    letter-spacing: -0.8px;
+    margin: 5% 0;
+  }
+
+  h3 {
+    font-size: 34px;
+    letter-spacing: -0.6px;
+    margin: 4% 0;
+  }
+
+  h4 {
+    font-size: 30px;
+    letter-spacing: -0.4px;
+    margin: 3% 0;
+  }
+
+  h5 {
+    font-size: 24px;
+    letter-spacing: -0.2px;
+    margin: 2% 0;
+  }
+
+  h6 {
+    font-size: 18px;
+    margin: 1% 0;
+  }
+
+  p {
+  	font-size: 26px;
+  }
+}
+
+a, a:visited, a:active, a:hover {
+	color: $grey;
+	text-decoration: none;
+}
+
+strong, .strong {
+	font-weight: 700;
+}
