@@ -1,4 +1,4 @@
-section {
+section#coupon, section#related  {
 	@include media("<tablet") {
 		padding-top: 20%;
 	}
@@ -18,8 +18,6 @@ section {
 		@include grid-push(3);
 	}
 }
-
-
 
 .coupon {
 	border-radius: 40px;
@@ -77,18 +75,51 @@ section {
 			}
 		}
 	}
+}
 
+.related {
+	h3 {
+		text-align: center;
+	}
+	.shopads {
+		@include grid-container;
 
-	.related {
-		@include grid-collapse;
-
-		.shopads {
-			@include media("<desktop") {
+		.shopad {
+			@include media("<tablet") {
 				@include grid-column(12);
+			}
+			@include media(">=tablet") {
+				@include grid-column(6);
 			}
 			@include media(">=desktop") {
-				@include grid-column(12);
+				@include grid-column(3);
 			}
+			padding-bottom: 20px;
+
+			a {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				flex-direction: column;
+
+				img {
+					max-width: 70%;
+					max-height: 80px;
+					height: auto;
+					margin-bottom: 20px;
+				}
+			}
+		}
+	}
+	.description {
+		@include media("<tablet") {
+			@include grid-column(12);
+		}
+		@include media(">=tablet") {
+			@include grid-column(9);
+		}
+		@include media(">=desktop") {
+			@include grid-column(6);
 		}
 	}
 }

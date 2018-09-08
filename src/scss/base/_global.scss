@@ -6,9 +6,9 @@ html, body {
 	flex-direction: column;
 }
 
-section {
-  @include grid-column(12);
-}
+// section {
+//   @include grid-column(12);
+// }
 
 .visible {
   visibility: hidden;

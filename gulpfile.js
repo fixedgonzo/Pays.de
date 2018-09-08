@@ -85,7 +85,7 @@ gulp.task('optimize-images', function() {
 
 gulp.task('include-retina', function() {
   return gulp.src(SOURCE + '*.html')
-    .pipe(imgRetina())
+    // .pipe(imgRetina())
     .pipe(gulp.dest(DEST));
 });
 
