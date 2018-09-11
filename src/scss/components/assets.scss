@@ -7,13 +7,46 @@ button, .button {
 	align-items: center;
 	font-weight: 700;
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.10);
-	background-image: linear-gradient(-180deg, #FFFFFF 90%, #F3F3F3 99%);
-	border: 1px solid #F3F3F3;
-	color: #FB5101;
+	background-image: linear-gradient(-180deg, #FFFFFF 90%, $grey-80 99%);
+	border: 1px solid $grey-80;
+	color: $orange;
+	margin-bottom: 1px;
+	margin-top: 0;
 
+	&:active {
+		background-image: none;
+		background-color: white;
+		box-shadow: 0 0 0 0 rgba(0,0,0,0.00);
+		margin-top: 1px;
+		margin-bottom: 0;
+	}
+	&:hover {
+		border: 1px solid $grey-70;
+		background-color: $grey-90;
+		background-image: none;
+	}
+	&:focus {
+		outline: 0;
+	}
+
+	// orange
 	&.orange {
-		background-image: linear-gradient(-180deg, #FB5101 90%, #FF7022 100%);
+		background-image: linear-gradient(-180deg, $orange 90%, darken($orange, 2%) 100%);
 		color: white;
+		border: 0;
+		outline: 0;
+
+		&:active {
+			background-image: none;
+			background-color: darken($orange, 10%);
+			box-shadow: 0 0 0 0 rgba(0,0,0,0.00);
+			margin-top: 1px;
+			margin-bottom: 0;
+		}
+		&:hover {
+			border: 0;
+			background-image: linear-gradient(-180deg, darken($orange, 2%) 90%, darken($orange, 4%) 100%);
+		}
 	}
 }
 
@@ -25,16 +58,29 @@ select, .select {
 	align-items: center;
 	font-weight: 700;
 	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.10);
-	background-image: linear-gradient(-180deg, #FFFFFF 90%, #F3F3F3 99%);
-	border: 1px solid #F3F3F3;
-	color: #FB5101;
+	background-image: linear-gradient(-180deg, #FFFFFF 90%, $grey-80 99%);
+	border: 1px solid $grey-80;
+	color: $orange;
 
 	option {
 		margin: 0 15px;
 	}
+	
+	&:focus {
+		outline: 0;
+	}
 
 	&.orange {
-		background-image: linear-gradient(-180deg, #FB5101 90%, #FF7022 100%);
+		background-image: linear-gradient(-180deg, $orange 90%, darken($orange, 2%) 100%);
 		color: white;
+		border: 0;
+		outline: 0;
+	}
+}
+
+.dropdown-menu {
+	.dropdown-item {
+		padding: 5px 15px;
+		width: auto;
 	}
 }

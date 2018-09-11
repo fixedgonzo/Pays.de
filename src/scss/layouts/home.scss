@@ -140,25 +140,25 @@ section#providers {
 					width: 120px;
 					height: 120px;
 					&:nth-child(-n+#{$logo-cols}) {
-						border-left: 1px solid #E5ECEF;
-						border-top: 1px solid #E5ECEF;
+						border-left: 1px solid $grey-70;
+						border-top: 1px solid $grey-70;
 						border-right: none;
 						border-bottom: none;
 					}
 					&:nth-child(n+#{$logo-cols}) {
-						border-left: 1px solid #E5ECEF;
-						border-top: 1px solid #E5ECEF;
+						border-left: 1px solid $grey-70;
+						border-top: 1px solid $grey-70;
 						border-right: none;
-						border-bottom: 1px solid #E5ECEF;
+						border-bottom: 1px solid $grey-70;
 					}
 					&:nth-child(#{$logo-cols}) {
-						border-left: 1px solid #E5ECEF;
-						border-top: 1px solid #E5ECEF;
-						border-right: 1px solid #E5ECEF;;
+						border-left: 1px solid $grey-70;
+						border-top: 1px solid $grey-70;
+						border-right: 1px solid $grey-70;
 						border-bottom: none;
 					}
 					&:last-child {
-						border: 1px solid #E5ECEF;
+						border: 1px solid $grey-70;
 					}
 					img {
 						max-width: 100px;

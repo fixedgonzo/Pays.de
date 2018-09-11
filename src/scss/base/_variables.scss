@@ -1,6 +1,15 @@
 $bg-blue: #FF0000;
-$grey: #24333A;
 $orange: #FB5101;
+$grey: #24333A;
+$grey-10: lighten($grey, 10%);
+$grey-20: lighten($grey, 20%);
+$grey-30: lighten($grey, 30%);
+$grey-40: lighten($grey, 40%);
+$grey-50: lighten($grey, 50%);
+$grey-60: lighten($grey, 60%);
+$grey-70: lighten($grey, 70%);
+$grey-80: lighten($grey, 80%);
+$grey-90: lighten($grey, 90%);
 
 $breakpoints: (
 	phone: 320px,

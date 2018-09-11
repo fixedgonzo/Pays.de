@@ -1,4 +1,4 @@
-section#coupon, section#related  {
+section#coupon, section#related, section#description, section#testimonials  {
 	@include media("<tablet") {
 		padding-top: 20%;
 	}
@@ -21,7 +21,7 @@ section#coupon, section#related  {
 
 .coupon {
 	border-radius: 40px;
-	background-color: #FBFAFE;
+	background-color: $grey-80;
 	padding: 5%;
 
 	.offer {
@@ -111,15 +111,80 @@ section#coupon, section#related  {
 			}
 		}
 	}
-	.description {
+}
+
+.description {
+	@include media("<tablet") {
+		@include grid-column(12);
+	}
+	@include media(">=tablet") {
+		@include grid-column(8);
+		@include grid-push(2);
+	}
+	@include media(">=desktop") {
+		@include grid-column(6);
+		@include grid-push(3);
+	}
+	text-align: center;
+}
+
+.testemonials.v1 {
+	.testemonial-block {
 		@include media("<tablet") {
 			@include grid-column(12);
 		}
 		@include media(">=tablet") {
-			@include grid-column(9);
+			@include grid-column(4);
 		}
-		@include media(">=desktop") {
-			@include grid-column(6);
+		div {
+			overflow: hidden;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+		p {
+			color: $grey-20;
+		}
+		cite {
+			color: $grey-60;
+		}	
+	}
+}
+
+.testemonials.v2 {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	.image {
+		@include media("<tablet") {
+			@include grid-column(12);
+		}
+		@include media(">=tablet") {
+			@include grid-column(4);
+			@include grid-push(1);
+		}
+		div {
+			overflow: hidden;
+			img {
+				width: 100%;
+				height: auto;
+			}
+		}
+	}
+	.text {
+		@include media("<tablet") {
+			@include grid-column(12);
+		}
+		@include media(">=tablet") {
+			@include grid-column(4);
+			@include grid-push(1);
+		}
+		p {
+			color: $grey-20;
+		}
+		cite {
+			color: $grey-60;
 		}
 	}
 }

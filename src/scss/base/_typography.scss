@@ -1,3 +1,7 @@
+h1, h2, h3, h4, h5, h6, p, body, html, div, section {
+  color: $grey;
+}
+
 @include media("<tablet") {
   h1 {
     font-size: 30px;
@@ -89,7 +93,7 @@
 }
 
 a, a:visited, a:active, a:hover {
-	color: $grey;
+	color: $grey-30;
 	text-decoration: none;
 }
 

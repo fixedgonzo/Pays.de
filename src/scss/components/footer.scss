@@ -45,7 +45,7 @@ section#bezahlmethoden {
 footer {
 	margin-top: 10%;
 	width: 100%;
-	background-color: #FBFAFE;
+	background-color: $grey-80;
 
 	#footer-partner {
 		padding-top: 10%;
@@ -112,8 +112,8 @@ footer {
 			margin-bottom: 50px;
 			border: 0;
 			height: 1px;
-			background-color: #E5E6E6;
-			color: #E5E6E6;
+			background-color: $grey-70;
+			color: $grey-70;
 		}
 		ul.menu {
 			display: flex;
@@ -162,7 +162,7 @@ footer {
 			padding: 0;
 			text-align: center;
 			margin-bottom: 50px;
-			color: #4E595F;
+			color: $grey-10;
 			font-size: 12px;
 			li {
 				padding: 10px 0;
