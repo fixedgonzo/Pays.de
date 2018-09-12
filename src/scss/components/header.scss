@@ -3,21 +3,30 @@ header {
 	align-items: center;
 	margin-top: 15px;
 	position: relative;
-	@include grid-container;
+	@include media("<tablet") {
+		@include grid-column(12);
+	}
+	@include media(">=tablet") {
+		@include grid-column(12);
+	}
+	@include media(">=desktop-hd") {
+		@include grid-column(8);
+		@include grid-push(2);
+	}
 
 	.header-logo {
 		@include media("<=tablet") {
-			@include grid-column(6);
+			@include grid-column(6, $neat-grid-nogap);
 			img {
 				max-width: 80px;
 				height: auto;
 			}
 		}
 		@include media(">tablet") {
-			@include grid-column(2);
+			@include grid-column(2, $neat-grid-nogap);
 		}
 		@include media(">=desktop-hd") {
-			@include grid-column(3);
+			@include grid-column(2, $neat-grid-nogap);
 		}
 	}
 
@@ -26,7 +35,7 @@ header {
 
 		@include media("<=tablet") {
 			order: 3;
-			@include grid-column(2);
+			@include grid-column(2, $neat-grid-nogap);
 			.hamburger-container {
 				display: block;
 			}
@@ -37,13 +46,13 @@ header {
 
 		}
 		@include media(">tablet") {
-			@include grid-column(8);
+			@include grid-column(8, $neat-grid-nogap);
 			.hamburger-container {
 				display: none;
 			}
 		}
 		@include media(">=desktop-hd") {
-			@include grid-column(6);
+			@include grid-column(8, $neat-grid-nogap);
 		}
 
 		.hamburger-container {
@@ -102,8 +111,8 @@ header {
 			@include media("<=tablet") {
 				position: absolute;
 				display: none;
-				left: 0;
-				right: 0;
+				left: -$grid-gap;
+				right: -$grid-gap;
 		    top: 50px;
 		    background-color: white;
 				justify-content: flex-end;
@@ -153,7 +162,7 @@ header {
 			@include grid-column(2);
 		}
 		@include media(">=desktop-hd") {
-			@include grid-column(3);
+			@include grid-column(2);
 		}
 		text-align: right;
 		a img {

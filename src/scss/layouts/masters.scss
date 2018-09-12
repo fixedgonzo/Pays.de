@@ -1,0 +1,63 @@
+.divider-title {
+	color: #009EDB;
+	padding-top: 10%;
+	margin-bottom: 5%;
+	padding-bottom: 5%;
+	border-bottom: 1px solid $grey-90;
+}
+
+#masters {
+	display: inline-block;
+	float: left;
+
+	.flex-row {
+		display: flex;
+		margin-bottom: 40px;
+		flex-wrap: wrap;
+
+		& > * {
+			margin-right: 20px;
+		}
+
+		label {
+			width: 60px;
+		}
+		input {
+			width: 200px;
+		}
+	}
+}
+
+
+#warenkorb {
+	table.items-table {
+		width: 100%;
+		text-align: left;
+		tr {
+			// display: flex;
+			// align-items: center;
+			// justify-content: space-between;
+		}
+		td, th {
+			// display: flex;
+			// align-items: center;
+			// justify-content: flex-start;
+		}
+
+		tr.couponrow {
+			height: 50px;
+			border-bottom: 1px solid $grey-90;
+			.couponitem, .couponvalue, .couponqty, .couponprice  {
+				display: flex;
+				align-items: center;
+				img {
+					max-width: 100px;
+					max-height: 30px;
+				}
+			}
+			.couponprice {
+				justify-content: flex-end;
+			}
+		}
+	}
+}

@@ -3,93 +3,101 @@ h1, h2, h3, h4, h5, h6, p, body, html, div, section {
 }
 
 @include media("<tablet") {
-  h1 {
+  .h1, h1 {
     font-size: 30px;
     letter-spacing: -1px;
     margin: 6% 0;
   }
 
-  h2 {
+  .h2, h2 {
     font-size: 24px;
     letter-spacing: -0.8px;
     margin: 5% 0;
   }
 
-  h3 {
+  .h3, h3 {
     font-size: 20px;
     letter-spacing: -0.6px;
     margin: 4% 0;
   }
 
-  h4 {
+  .h4, h4 {
     font-size: 24px;
     letter-spacing: -0.4px;
     margin: 3% 0;
   }
 
-  h5 {
+  .h5, h5 {
     font-size: 18px;
     letter-spacing: -0.2px;
     margin: 2% 0;
   }
 
-  h6 {
+  .h6, h6 {
     font-size: 14px;
     margin: 1% 0;
   }
 
-  p {
+  .p, p {
   	font-size: 16px;
   }
 
-  p.big {
+  p.big, .p.big {
   	font-size: 26px;
   }
+
+	.small, small {
+		font-size: 13px;
+	}
 }
 
 @include media(">=tablet") {
-  h1 {
+  .h1, h1 {
     font-size: 48px;
     letter-spacing: -1px;
     margin: 6% 0;
   }
 
-  h2 {
+  .h2, h2 {
     font-size: 38px;
     letter-spacing: -0.8px;
     margin: 5% 0;
   }
 
-  h3 {
+  .h3, h3 {
     font-size: 34px;
     letter-spacing: -0.6px;
     margin: 4% 0;
   }
 
-  h4 {
+  .h4, h4 {
     font-size: 30px;
     letter-spacing: -0.4px;
     margin: 3% 0;
   }
 
-  h5 {
+  .h5, h5 {
     font-size: 16px;
     letter-spacing: -0.2px;
     margin: 2% 0;
   }
 
-  h6 {
+  .h6, h6 {
     font-size: 13px;
     margin: 1% 0;
   }
 
-  p {
+  .p, p {
   	font-size: 16px;
   }
 
-  p.big {
+  p.big, .p.big {
   	font-size: 26px;
   }
+
+	.small, small {
+		font-size: 13px;
+	}
 }
 
 a, a:visited, a:active, a:hover {

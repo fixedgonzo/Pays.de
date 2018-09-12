@@ -10,6 +10,41 @@ html, body {
 //   @include grid-column(12);
 // }
 
+blockquote {
+	margin: 0;
+	padding: 0;
+}
+
+section.container  {
+	@include media("<tablet") {
+		padding-top: 20%;
+	}
+	@include media(">=tablet") {
+		padding-top: 5%;
+	}
+
+	@include media("<desktop") {
+		@include grid-column(12);
+	}
+	@include media(">=desktop") {
+		@include grid-column(10);
+		@include grid-push(1);
+	}
+	@include media(">=desktop-hd") {
+		@include grid-column(6);
+		@include grid-push(3);
+	}
+}
+
+.section-padding {
+	@include media("<tablet") {
+		padding-top: 30%;
+	}
+	@include media(">=tablet") {
+		padding-top: 10%;
+	}
+}
+
 .visible {
   visibility: hidden;
   display: none;
