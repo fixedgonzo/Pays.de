@@ -14,6 +14,9 @@ $grey-90: mix($lightgrey, $grey, 90%);
 $grey-95: mix($lightgrey, $grey, 95%);
 $red: #FF4444;
 $green: #36CB6B;
+$yellow: #E6C95C;
+
+$fa-font-path: "./dist/webfonts";
 
 $breakpoints: (
 	phone: 3,
@@ -23,17 +26,18 @@ $breakpoints: (
 	desktop-hd: 1980px,
 );
 
-$neat-grid-nogap: (
-  columns: 12,
-  gutter: 0,
-);
-
 $grid-gap: 20px;
 
 $neat-grid: (
   columns: 12,
   gutter: $grid-gap,
 );
+
+$neat-grid-nogap: (
+  columns: 12,
+  gutter: 0px,
+);
+
 $neat-grid-extended-gap: (
   columns: 12,
   gutter: $grid-gap * 3,

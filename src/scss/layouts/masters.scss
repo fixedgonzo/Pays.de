@@ -27,37 +27,3 @@
 		}
 	}
 }
-
-
-#warenkorb {
-	table.items-table {
-		width: 100%;
-		text-align: left;
-		tr {
-			// display: flex;
-			// align-items: center;
-			// justify-content: space-between;
-		}
-		td, th {
-			// display: flex;
-			// align-items: center;
-			// justify-content: flex-start;
-		}
-
-		tr.couponrow {
-			height: 50px;
-			border-bottom: 1px solid $grey-90;
-			.couponitem, .couponvalue, .couponqty, .couponprice  {
-				display: flex;
-				align-items: center;
-				img {
-					max-width: 100px;
-					max-height: 30px;
-				}
-			}
-			.couponprice {
-				justify-content: flex-end;
-			}
-		}
-	}
-}

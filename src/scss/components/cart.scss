@@ -1,0 +1,230 @@
+#warenkorb {
+	.cart-table {
+		width: 100%;
+		text-align: left;
+
+		.header {
+			border-bottom: 1px solid $grey-80;
+			height: 50px;
+			display: flex;
+			align-items: center;
+			@include media("<tablet") {
+				.couponqty {
+					@include grid-column(5, $neat-grid-nogap);
+				}
+				.couponvalue {
+					display: none !important;
+				}
+				.couponitem {
+					@include grid-column(5, $neat-grid-nogap);
+					span {
+						display: none;
+					}
+				}
+				.couponprice {
+					@include grid-column(2, $neat-grid-nogap);
+					text-align: right;
+				}
+			}
+			@include media(">=tablet") {
+				.couponqty {
+					@include grid-column(3, $neat-grid-nogap);
+				}
+				.couponvalue {
+					@include grid-column(3, $neat-grid-nogap);
+				}
+				.couponitem {
+					@include grid-column(3, $neat-grid-nogap);
+				}
+				.couponprice {
+					@include grid-column(3, $neat-grid-nogap);
+					text-align: right;
+				}
+			}
+		}
+
+		.couponrow {
+			display: flex;
+			align-items: center;
+			height: 50px;
+			border-bottom: 1px solid $grey-95;
+			@include media("<tablet") {
+				.couponqty {
+					@include grid-column(5, $neat-grid-nogap);
+				}
+				.couponvalue {
+					display: none !important;
+				}
+				.couponitem {
+					@include grid-column(5, $neat-grid-nogap);
+					span {
+						display: none;
+					}
+				}
+				.couponprice {
+					@include grid-column(2, $neat-grid-nogap);
+					text-align: right;
+				}
+			}
+			@include media(">=tablet") {
+				.couponqty {
+					@include grid-column(3, $neat-grid-nogap);
+				}
+				.couponvalue {
+					@include grid-column(3, $neat-grid-nogap);
+				}
+				.couponitem {
+					@include grid-column(3, $neat-grid-nogap);
+				}
+				.couponprice {
+					@include grid-column(3, $neat-grid-nogap);
+					text-align: right;
+				}
+			}
+
+			&.last {
+				border-bottom: 1px solid $grey-80;
+			}
+
+			.couponitem, .couponvalue, .couponqty, .couponprice  {
+				display: flex;
+				align-items: center;
+				img {
+					max-width: 100px;
+					max-height: 44px;
+					margin-right: 20px;
+				}
+			}
+
+			.couponprice {
+				justify-content: flex-end;
+			}
+
+			a.delete {
+				margin-right: 20px;
+				padding: 0;
+				width: 30px;
+				@extend %fa-icon;
+	  		@extend .fas;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: $grey-50;
+
+				&:before {
+			    content: fa-content('\f2ed');
+			  }
+			}
+			select.ammount {
+				width: 60px;
+			}
+		}
+
+		.summary {
+			display: flex;
+			justify-content: flex-end;
+			width: 100%;
+			padding: 20px 0;
+			border-bottom: 1px solid $grey-95;
+
+			&:last-child {
+				border-bottom: 0;
+			}
+
+			@include media("<tablet") {
+				.desc {
+					@include grid-column(6, $neat-grid-nogap);
+				}
+				.value {
+					@include grid-column(6, $neat-grid-nogap);
+				}
+			}
+
+			@include media(">=tablet") {
+				.desc {
+					@include grid-column(8, $neat-grid-nogap);
+				}
+				.value {
+					@include grid-column(4, $neat-grid-nogap);
+				}
+			}
+
+			@include media(">=desktop") {
+				.desc {
+					@include grid-column(4, $neat-grid-nogap);
+					@include grid-push(6, $neat-grid-nogap);
+				}
+				.value {
+					@include grid-column(2, $neat-grid-nogap);
+				}
+			}
+
+			@include media(">=desktop-hd") {
+				.desc {
+					@include grid-column(3, $neat-grid-nogap);
+					@include grid-push(8, $neat-grid-nogap);
+				}
+				.value {
+					@include grid-column(1, $neat-grid-nogap);
+				}
+			}
+
+			.desc {
+				p {
+					height: 30px;
+					display: flex;
+					align-items: center;
+					justify-content: flex-start;
+				}
+				small {
+					margin-top: 10px;
+					display: block;
+				}
+			}
+
+			.value {
+				text-align: right;
+				p {
+					height: 30px;
+					display: flex;
+					align-items: center;
+					justify-content: flex-end;
+				}
+				span {
+					@extend .button-height;
+				}
+				small, span {
+					width: 100%;
+					justify-content: flex-end;
+				}
+				small {
+					margin-top: 10px;
+					display: block;
+				}
+			}
+		}
+
+		.classification {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-right: 10px;
+			font-size: 10px;
+			font-weight: bold;
+			color: white;
+			width: 20px;
+			height: 20px;
+			border-radius: 10px;
+			background-color: $lightgrey;
+			&.c {
+				color: $green;
+			}
+			&.b {
+				color: $yellow;
+			}
+			&.a {
+				color: $orange;
+			}
+		}
+	}
+}

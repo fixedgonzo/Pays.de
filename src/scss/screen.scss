@@ -12,6 +12,10 @@
 // @import "./node_modules/bootstrap/scss/code";
 // @import "./node_modules/bootstrap/scss/grid";
 
+// FontAwesome 4
+@import "./src/vendor/fontawesome/scss/fontawesome.scss";
+@import "./src/vendor/fontawesome/scss/solid.scss";
+
 // Plugins
 @import "plugins/neat/_neat.scss";
 @import "plugins/_include-media.scss";
@@ -26,6 +30,7 @@
 @import 'components/header';
 @import 'components/footer';
 @import 'components/assets';
+@import 'components/cart';
 
 @import 'layouts/home';
 @import 'layouts/coupon';
