@@ -4,6 +4,7 @@ $(document).ready(function() {
    duration: 1200
   });
 
+
   // mobile menu
   $(".hamburger-container").click(function() {
     $("#menu").slideToggle();
@@ -29,17 +30,6 @@ $(document).ready(function() {
       topBar.addClass("rot45deg");
       middleBar.addClass("rot-45deg");
     }
-  });
-
-  // logos fade carousel
-  $('.slider').slick({
-    dots: false,
-    prevArrow: false,
-    nextArrow: false,
-    infinite: true,
-    autoplay: true,
-    speed: 500,
-    fade: true
   });
   // end
 });

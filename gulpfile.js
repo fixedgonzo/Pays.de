@@ -109,7 +109,7 @@ gulp.task('vendorJs', function() {
 		.pipe(gulp.dest(DEST + 'vendor/'))
 });
 
-gulp.task('default', ['browser-sync', 'optimize-images', 'include-retina', 'vendorStyles', 'vendorJs'], function() {
+gulp.task('default', ['build-css', 'build-js', 'vendorStyles', 'vendorJs', 'optimize-images', 'include-retina', 'browser-sync'], function() {
   gulp.watch(SOURCE + 'js/**/*.js', ['build-js', browserSync.reload]);
   gulp.watch(SOURCE + 'scss/*.scss', ['build-css', browserSync.reload]);
   gulp.watch(SOURCE + 'scss/**/*.scss', ['build-css', browserSync.reload]);

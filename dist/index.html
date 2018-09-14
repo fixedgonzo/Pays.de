@@ -61,12 +61,12 @@
 				<h1>Erhalte schnell und einfach digitale Gutscheine auf Kredit</h1>
 			</div>
 			<div class="image" data-aos="fade-up">
-				<!-- <div class="slider">
+				<div class="logo-slider" id="logo-slider">
 					<div><img src="images/carousel/carousel-googleplay.png" alt="Google Play"></div>
 					<div><img src="images/carousel/carousel-itunes.png" alt="iTunes"></div>
 					<div><img src="images/carousel/carousel-paysafecard.png" alt="PaySafeCard"></div>
 					<div><img src="images/carousel/carousel-steam.png" alt="Steam"></div>
-				</div> -->
+				</div>
 				<img src="images/intro.png" class="visible desktop">
 				<img src="images/intro-mobile.png" class="visible mobile">
 				<div class="cta">
@@ -279,10 +279,22 @@
 		</footer>
 
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 		<script src="vendor/vendor.min.js"></script>
 		<script src="js/main.js"></script>
+		<script>
+			$("#logo-slider > div:gt(0)").hide();
+			setInterval(function() {
+				$('#logo-slider > div:first')
+					.fadeOut(1000)
+					.next()
+					.fadeIn(1000)
+					.end()
+					.appendTo('#logo-slider');
+			}, 3000);
+		</script>
 	</body>
 
 </html>
