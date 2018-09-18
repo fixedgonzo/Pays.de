@@ -17,10 +17,32 @@ button, .button, select, .select {
 	&.small {
 		height: 30px;
 	}
-	&:hover {
+
+	&.transparent {
+		background-image: none;
+		box-shadow: none;
+		background-color: transparent;
+		outline: 0;
+		border: 0;
+	}
+
+	&.close {
+		padding: 0;
+		width: 30px;
+		@extend %fa-icon;
+		@extend .fas;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		&:before {
+			content: fa-content('\f00d');
+		}
+	}
+	&:hover:not(.transparent) {
 		border: 1px solid $grey-90;
 	}
-	&:active {
+	&:active:not(.transparent) {
 		background-image: none;
 		background-color: white;
 		box-shadow: 0 0 0 0 rgba(0,0,0,0.00);
